@@ -88,7 +88,7 @@ export default function ContactPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  padding: "24px",
+                  padding: "18px 16px",
                 }}
               >
                 <div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                       backgroundColor: `var(--chip-${info.chipColor})`,
                       padding: "4px 10px",
                       borderRadius: "9999px",
-                      marginBottom: "14px",
+                      marginBottom: "10px",
                     }}
                   >
                     Channel 0{idx + 1}
@@ -165,7 +165,7 @@ export default function ContactPage() {
                 key={index}
                 className="dc-card"
                 style={{
-                  padding: "22px",
+                  padding: "16px 14px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
@@ -177,7 +177,7 @@ export default function ContactPage() {
                       display: "flex",
                       alignItems: "center",
                       gap: "10px",
-                      marginBottom: "12px",
+                      marginBottom: "8px",
                     }}
                   >
                     <span
@@ -209,7 +209,7 @@ export default function ContactPage() {
                       fontSize: "0.8125rem",
                       lineHeight: 1.5,
                       color: "var(--color-muted)",
-                      marginBottom: "16px",
+                      marginBottom: "10px",
                     }}
                   >
                     {dept.desc}
@@ -218,7 +218,7 @@ export default function ContactPage() {
 
                 <div
                   style={{
-                    paddingTop: "12px",
+                    paddingTop: "8px",
                     borderTop: "1px solid var(--color-line)",
                   }}
                 >
@@ -256,7 +256,7 @@ export default function ContactPage() {
             style={{
               display: "grid",
               gridTemplateColumns: "1.25fr 1fr",
-              gap: "40px",
+              gap: "24px",
               alignItems: "flex-start",
             }}
             className="contact-two-column"

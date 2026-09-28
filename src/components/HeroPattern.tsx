@@ -49,7 +49,7 @@ export default function HeroPattern({
         <h1
           style={{
             maxWidth: "760px",
-            marginBottom: "20px",
+            marginBottom: "14px",
             lineHeight: 1.15,
           }}
         >
@@ -68,7 +68,7 @@ export default function HeroPattern({
               fontSize: "1.125rem",
               lineHeight: 1.6,
               color: "var(--color-muted)",
-              marginBottom: children ? "32px" : "0",
+              marginBottom: children ? "20px" : "0",
             }}
           >
             {lede}

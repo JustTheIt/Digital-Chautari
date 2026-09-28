@@ -139,7 +139,7 @@ export default function ServicesPage() {
             subtitle="Every engagement is structured around measurable KPIs, transparent communication, and rapid turnaround."
           />
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "56px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
             {serviceCategories.map((category) => (
               <div
                 key={category.id}
@@ -147,10 +147,10 @@ export default function ServicesPage() {
                   backgroundColor: "var(--color-white)",
                   border: "1px solid var(--color-line)",
                   borderRadius: "16px",
-                  padding: "40px",
+                  padding: "28px 30px",
                   display: "grid",
                   gridTemplateColumns: "1.05fr 1.2fr",
-                  gap: "40px",
+                  gap: "28px",
                   alignItems: "center",
                   boxShadow: "0 4px 20px -8px rgba(16, 24, 38, 0.05)",
                 }}
@@ -158,7 +158,7 @@ export default function ServicesPage() {
               >
                 {/* Left: Title, Description, Highlights */}
                 <div>
-                  <div style={{ marginBottom: "16px" }}>
+                  <div style={{ marginBottom: "10px" }}>
                     <span
                       style={{
                         display: "inline-block",
@@ -181,7 +181,7 @@ export default function ServicesPage() {
                       fontSize: "1.75rem",
                       fontWeight: 800,
                       color: "var(--color-ink)",
-                      marginBottom: "12px",
+                      marginBottom: "8px",
                       lineHeight: 1.25,
                     }}
                   >
@@ -193,7 +193,7 @@ export default function ServicesPage() {
                       fontSize: "0.975rem",
                       lineHeight: 1.65,
                       color: "var(--color-muted)",
-                      marginBottom: "24px",
+                      marginBottom: "14px",
                     }}
                   >
                     {category.description}
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                       display: "flex",
                       flexDirection: "column",
                       gap: "10px",
-                      marginBottom: "28px",
+                      marginBottom: "18px",
                     }}
                   >
                     {category.highlights.map((h, i) => (
@@ -248,7 +248,7 @@ export default function ServicesPage() {
                         backgroundColor: "var(--color-paper)",
                         border: "1px solid var(--color-line)",
                         borderRadius: "12px",
-                        padding: "20px",
+                        padding: "16px 14px",
                         display: "flex",
                         flexDirection: "column",
                         gap: "10px",
@@ -303,7 +303,7 @@ export default function ServicesPage() {
             <div
               className="dc-card"
               style={{
-                padding: "36px 28px",
+                padding: "24px 22px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -327,8 +327,8 @@ export default function ServicesPage() {
                     fontSize: "2rem",
                     fontWeight: 800,
                     color: "var(--color-ink)",
-                    marginTop: "10px",
-                    marginBottom: "6px",
+                    marginTop: "8px",
+                    marginBottom: "4px",
                   }}
                 >
                   Rs 15,000
@@ -348,7 +348,7 @@ export default function ServicesPage() {
                     fontSize: "0.875rem",
                     color: "var(--color-muted)",
                     lineHeight: 1.5,
-                    marginBottom: "24px",
+                    marginBottom: "16px",
                   }}
                 >
                   Ideal for emerging startups, local retail brands, and independent clinics launching their digital presence.
@@ -358,8 +358,8 @@ export default function ServicesPage() {
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "12px",
-                    marginBottom: "32px",
+                    gap: "10px",
+                    marginBottom: "20px",
                   }}
                 >
                   {[
@@ -407,7 +407,7 @@ export default function ServicesPage() {
             <div
               className="dc-card dc-card-navy"
               style={{
-                padding: "36px 28px",
+                padding: "24px 22px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -455,8 +455,8 @@ export default function ServicesPage() {
                     fontSize: "2rem",
                     fontWeight: 800,
                     color: "#FFFFFF",
-                    marginTop: "10px",
-                    marginBottom: "6px",
+                    marginTop: "8px",
+                    marginBottom: "4px",
                   }}
                 >
                   Rs 45,000
@@ -476,7 +476,7 @@ export default function ServicesPage() {
                     fontSize: "0.875rem",
                     color: "#94A3B8",
                     lineHeight: 1.5,
-                    marginBottom: "24px",
+                    marginBottom: "16px",
                   }}
                 >
                   Comprehensive growth engine for ambitious scaling businesses seeking market leadership in Nepal.
@@ -486,8 +486,8 @@ export default function ServicesPage() {
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "12px",
-                    marginBottom: "32px",
+                    gap: "10px",
+                    marginBottom: "20px",
                   }}
                 >
                   {[
@@ -542,7 +542,7 @@ export default function ServicesPage() {
             <div
               className="dc-card"
               style={{
-                padding: "36px 28px",
+                padding: "24px 22px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -566,8 +566,8 @@ export default function ServicesPage() {
                     fontSize: "2rem",
                     fontWeight: 800,
                     color: "var(--color-ink)",
-                    marginTop: "10px",
-                    marginBottom: "6px",
+                    marginTop: "8px",
+                    marginBottom: "4px",
                   }}
                 >
                   Custom
@@ -587,7 +587,7 @@ export default function ServicesPage() {
                     fontSize: "0.875rem",
                     color: "var(--color-muted)",
                     lineHeight: 1.5,
-                    marginBottom: "24px",
+                    marginBottom: "16px",
                   }}
                 >
                   Tailored solutions for healthcare groups, enterprise software platforms, and regional conglomerates.
@@ -597,8 +597,8 @@ export default function ServicesPage() {
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "12px",
-                    marginBottom: "32px",
+                    gap: "10px",
+                    marginBottom: "20px",
                   }}
                 >
                   {[
@@ -737,7 +737,7 @@ export default function ServicesPage() {
             <div
               key={index}
               className="dc-card dc-card-navy"
-              style={{ padding: "26px" }}
+              style={{ padding: "20px 18px" }}
             >
               <span
                 style={{
@@ -747,7 +747,7 @@ export default function ServicesPage() {
                   color: "var(--color-accent-gold)",
                   letterSpacing: "0.05em",
                   textTransform: "uppercase",
-                  marginBottom: "12px",
+                  marginBottom: "8px",
                 }}
               >
                 Pillar 0{index + 1}

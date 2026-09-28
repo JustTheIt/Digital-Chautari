@@ -103,7 +103,7 @@ export default function ProductSwitcher() {
           justifyContent: "center",
           gap: "10px",
           flexWrap: "wrap",
-          marginBottom: "40px",
+          marginBottom: "22px",
         }}
       >
         {products.map((product) => {
@@ -145,11 +145,11 @@ export default function ProductSwitcher() {
           backgroundColor: "var(--color-white)",
           border: "1px solid var(--color-line)",
           borderRadius: "16px",
-          padding: "40px",
+          padding: "28px 30px",
           boxShadow: "0 10px 30px -10px rgba(16, 24, 38, 0.08)",
           display: "grid",
           gridTemplateColumns: "1.1fr 1fr",
-          gap: "40px",
+          gap: "28px",
           alignItems: "center",
         }}
         className="product-panel"
@@ -167,7 +167,7 @@ export default function ProductSwitcher() {
               backgroundColor: "rgba(15, 148, 136, 0.1)",
               padding: "4px 12px",
               borderRadius: "9999px",
-              marginBottom: "14px",
+              marginBottom: "10px",
             }}
           >
             {currentProduct.category}
@@ -178,7 +178,7 @@ export default function ProductSwitcher() {
               fontSize: "1.85rem",
               fontWeight: 800,
               color: "var(--color-ink)",
-              marginBottom: "8px",
+              marginBottom: "6px",
             }}
           >
             {currentProduct.title}
@@ -189,7 +189,7 @@ export default function ProductSwitcher() {
               color: "var(--color-accent-gold)",
               fontWeight: 600,
               fontSize: "1rem",
-              marginBottom: "16px",
+              marginBottom: "10px",
             }}
           >
             {currentProduct.tagline}
@@ -199,7 +199,7 @@ export default function ProductSwitcher() {
             style={{
               color: "var(--color-muted)",
               lineHeight: 1.65,
-              marginBottom: "24px",
+              marginBottom: "16px",
               fontSize: "0.975rem",
             }}
           >
@@ -212,7 +212,7 @@ export default function ProductSwitcher() {
               display: "flex",
               flexDirection: "column",
               gap: "10px",
-              marginBottom: "28px",
+              marginBottom: "18px",
             }}
           >
             {currentProduct.highlights.map((item, i) => (
@@ -247,11 +247,11 @@ export default function ProductSwitcher() {
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
               gap: "14px",
-              padding: "16px",
+              padding: "14px",
               borderRadius: "12px",
               backgroundColor: "var(--color-paper)",
               border: "1px solid var(--color-line)",
-              marginBottom: "28px",
+              marginBottom: "18px",
             }}
           >
             {currentProduct.metrics.map((m, i) => (

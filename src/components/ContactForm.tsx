@@ -66,7 +66,7 @@ export default function ContactForm() {
         backgroundColor: "var(--color-white)",
         border: "1px solid var(--color-line)",
         borderRadius: "var(--radius-card)",
-        padding: "36px",
+        padding: "26px 24px",
         boxShadow: "0 4px 20px -8px rgba(16, 24, 38, 0.06)",
       }}
     >
@@ -85,7 +85,7 @@ export default function ContactForm() {
         style={{
           color: "var(--color-muted)",
           fontSize: "0.9375rem",
-          marginBottom: "28px",
+          marginBottom: "16px",
           lineHeight: 1.5,
         }}
       >

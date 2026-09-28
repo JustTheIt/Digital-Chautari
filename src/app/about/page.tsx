@@ -116,7 +116,7 @@ export default function AboutPage() {
             style={{
               display: "grid",
               gridTemplateColumns: "1.1fr 1fr",
-              gap: "48px",
+              gap: "32px",
               alignItems: "center",
             }}
             className="story-block-grid"
@@ -129,7 +129,7 @@ export default function AboutPage() {
               <h2
                 style={{
                   fontSize: "2.25rem",
-                  marginBottom: "20px",
+                  marginBottom: "12px",
                   lineHeight: 1.25,
                 }}
               >
@@ -141,7 +141,7 @@ export default function AboutPage() {
                   fontSize: "1.05rem",
                   lineHeight: 1.7,
                   color: "var(--color-muted)",
-                  marginBottom: "16px",
+                  marginBottom: "12px",
                 }}
               >
                 In the hills and valleys of Nepal, a <em>Chautari</em> has served for centuries as an open-air community gathering platform. Under the cool canopy of peepal and banyan trees, weary wayfarers set down their loads, elders exchange wisdom, and community decisions take shape.
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   fontSize: "1.05rem",
                   lineHeight: 1.7,
                   color: "var(--color-muted)",
-                  marginBottom: "28px",
+                  marginBottom: "16px",
                 }}
               >
                 We established Digital Chautari in Kathmandu with that exact ethos: creating a sanctuary where technology is not cold or transactional, but deeply human, collaborative, and empowering. Today, we unite performance marketing, cinematic filmmaking, and life-changing health-tech under one visionary roof.
@@ -184,7 +184,7 @@ export default function AboutPage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
-                gap: "18px",
+                gap: "14px",
               }}
               className="stat-tiles-grid"
             >
@@ -194,7 +194,7 @@ export default function AboutPage() {
                   backgroundColor: "var(--color-primary)",
                   color: "#FFFFFF",
                   borderRadius: "14px",
-                  padding: "32px 24px",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   backgroundColor: "var(--color-navy)",
                   color: "#FFFFFF",
                   borderRadius: "14px",
-                  padding: "32px 24px",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
@@ -272,7 +272,7 @@ export default function AboutPage() {
                   backgroundColor: "var(--color-white)",
                   color: "var(--color-ink)",
                   borderRadius: "14px",
-                  padding: "32px 24px",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
@@ -312,7 +312,7 @@ export default function AboutPage() {
                   backgroundColor: "var(--color-accent-gold)",
                   color: "var(--color-ink)",
                   borderRadius: "14px",
-                  padding: "32px 24px",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
@@ -366,7 +366,7 @@ export default function AboutPage() {
             <div
               className="dc-card"
               style={{
-                padding: "36px",
+                padding: "24px 22px",
                 borderLeft: "4px solid var(--color-primary)",
               }}
             >
@@ -381,7 +381,7 @@ export default function AboutPage() {
                   backgroundColor: "var(--chip-teal)",
                   padding: "4px 10px",
                   borderRadius: "9999px",
-                  marginBottom: "12px",
+                  marginBottom: "8px",
                 }}
               >
                 Mission
@@ -391,7 +391,7 @@ export default function AboutPage() {
                   fontSize: "1.45rem",
                   fontWeight: 700,
                   color: "var(--color-ink)",
-                  marginBottom: "12px",
+                  marginBottom: "8px",
                 }}
               >
                 Our Mission
@@ -411,7 +411,7 @@ export default function AboutPage() {
             <div
               className="dc-card"
               style={{
-                padding: "36px",
+                padding: "24px 22px",
                 borderLeft: "4px solid var(--color-accent-gold)",
               }}
             >
@@ -426,7 +426,7 @@ export default function AboutPage() {
                   backgroundColor: "var(--chip-gold)",
                   padding: "4px 10px",
                   borderRadius: "9999px",
-                  marginBottom: "12px",
+                  marginBottom: "8px",
                 }}
               >
                 Vision
@@ -436,7 +436,7 @@ export default function AboutPage() {
                   fontSize: "1.45rem",
                   fontWeight: 700,
                   color: "var(--color-ink)",
-                  marginBottom: "12px",
+                  marginBottom: "8px",
                 }}
               >
                 Our Vision
@@ -523,7 +523,7 @@ export default function AboutPage() {
             <div
               key={index}
               className="dc-card dc-card-navy"
-              style={{ padding: "26px" }}
+              style={{ padding: "18px 16px" }}
             >
               <span
                 style={{
@@ -533,7 +533,7 @@ export default function AboutPage() {
                   color: "var(--color-accent-gold)",
                   letterSpacing: "0.05em",
                   textTransform: "uppercase",
-                  marginBottom: "12px",
+                  marginBottom: "8px",
                 }}
               >
                 Standard 0{index + 1}
@@ -581,7 +581,7 @@ export default function AboutPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  padding: "26px",
+                  padding: "20px 18px",
                 }}
               >
                 <div>
@@ -590,7 +590,7 @@ export default function AboutPage() {
                       display: "flex",
                       alignItems: "center",
                       gap: "14px",
-                      marginBottom: "16px",
+                      marginBottom: "12px",
                     }}
                   >
                     <div
@@ -633,7 +633,7 @@ export default function AboutPage() {
                       fontSize: "0.875rem",
                       lineHeight: 1.6,
                       color: "var(--color-muted)",
-                      marginBottom: "18px",
+                      marginBottom: "12px",
                     }}
                   >
                     {member.bio}
@@ -642,7 +642,7 @@ export default function AboutPage() {
 
                 <div
                   style={{
-                    paddingTop: "14px",
+                    paddingTop: "10px",
                     borderTop: "1px solid var(--color-line)",
                     fontSize: "0.75rem",
                     fontWeight: 600,
@@ -669,7 +669,7 @@ export default function AboutPage() {
             position: "relative",
             maxWidth: "860px",
             margin: "0 auto",
-            padding: "20px 0",
+            padding: "10px 0",
           }}
           className="timeline-container"
         >
@@ -688,7 +688,7 @@ export default function AboutPage() {
           />
 
           {/* Timeline Nodes */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
             {roadmapMilestones.map((node, index) => {
               const isLeft = node.side === "left";
               return (
@@ -727,7 +727,7 @@ export default function AboutPage() {
                       backgroundColor: "var(--color-navy-card)",
                       border: "1px solid var(--color-navy-border)",
                       borderRadius: "14px",
-                      padding: "24px",
+                      padding: "18px 20px",
                       boxShadow: "0 10px 24px rgba(0, 0, 0, 0.4)",
                     }}
                     className="timeline-card"

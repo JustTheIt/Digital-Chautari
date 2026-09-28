@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import HeroPattern from "@/components/HeroPattern";
 import StatBar from "@/components/StatBar";
@@ -24,7 +25,7 @@ export default function HomePage() {
             alignItems: "center",
             gap: "16px",
             flexWrap: "wrap",
-            marginBottom: "12px",
+            marginBottom: "0px",
           }}
         >
           <Link href="/services" className="btn-primary">
@@ -93,7 +94,7 @@ export default function HomePage() {
             style={{
               display: "grid",
               gridTemplateColumns: "1.05fr 1fr",
-              gap: "48px",
+              gap: "32px",
               alignItems: "center",
             }}
             className="who-we-are-grid"
@@ -106,7 +107,7 @@ export default function HomePage() {
               <h2
                 style={{
                   fontSize: "2.35rem",
-                  marginBottom: "20px",
+                  marginBottom: "12px",
                   lineHeight: 1.2,
                 }}
               >
@@ -118,7 +119,7 @@ export default function HomePage() {
                   fontSize: "1.05rem",
                   lineHeight: 1.7,
                   color: "var(--color-muted)",
-                  marginBottom: "16px",
+                  marginBottom: "10px",
                 }}
               >
                 In Nepali tradition, a <em>Chautari</em> is a tranquil stone platform shaded by sacred banyan trees where travelers, villagers, and storytellers rest, share perspectives, and find inspiration before embarking on the next leg of their journey.
@@ -128,7 +129,7 @@ export default function HomePage() {
                   fontSize: "1.05rem",
                   lineHeight: 1.7,
                   color: "var(--color-muted)",
-                  marginBottom: "28px",
+                  marginBottom: "16px",
                 }}
               >
                 Digital Chautari breathes modern vitality into this timeless spirit. Headquartered in Kathmandu, we bring visionary founders, health practitioners, and creative storytellers under one digital canopy to turn bold concepts into market-defining digital reality.
@@ -140,7 +141,7 @@ export default function HomePage() {
                   display: "grid",
                   gridTemplateColumns: "1fr 1fr",
                   gap: "14px",
-                  marginBottom: "32px",
+                  marginBottom: "20px",
                 }}
               >
                 {[
@@ -235,7 +236,7 @@ export default function HomePage() {
             <div
               key={index}
               className="dc-card dc-card-navy"
-              style={{ textAlign: "center", padding: "28px 20px" }}
+              style={{ textAlign: "center", padding: "20px 16px" }}
             >
               <div
                 style={{
@@ -408,7 +409,7 @@ export default function HomePage() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                padding: "26px",
+                padding: "20px 18px",
               }}
             >
               <div>
@@ -417,7 +418,7 @@ export default function HomePage() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    marginBottom: "18px",
+                    marginBottom: "12px",
                   }}
                 >
                   <div
@@ -524,7 +525,7 @@ export default function HomePage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  padding: "26px",
+                  padding: "20px 18px",
                 }}
               >
                 <div>
@@ -541,7 +542,7 @@ export default function HomePage() {
                       fontWeight: 800,
                       letterSpacing: "0.04em",
                       textTransform: "uppercase",
-                      marginBottom: "16px",
+                      marginBottom: "10px",
                     }}
                   >
                     5.0 Rating • Verified Client
@@ -553,7 +554,7 @@ export default function HomePage() {
                       lineHeight: 1.65,
                       color: "var(--color-ink)",
                       fontStyle: "italic",
-                      marginBottom: "24px",
+                      marginBottom: "14px",
                     }}
                   >
                     &ldquo;{t.quote}&rdquo;
@@ -565,7 +566,7 @@ export default function HomePage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "12px",
-                    paddingTop: "16px",
+                    paddingTop: "12px",
                     borderTop: "1px solid var(--color-line)",
                   }}
                 >
@@ -625,33 +626,33 @@ export default function HomePage() {
             {[
               {
                 category: "Marketing",
-                tagColor: "var(--chip-teal)",
                 textColor: "var(--color-primary-dark)",
                 title: "How Hyper-Local Storytelling Converted 3x More Leads in Kathmandu",
                 excerpt: "Analyzing customer behavior patterns across Kathmandu Valley and why authentic cultural hooks outperform generic corporate copy.",
                 date: "Sep 18, 2026",
                 readTime: "5 min read",
-                bannerBg: "linear-gradient(135deg, #0F9488 0%, #0B6F66 100%)",
+                image: "/blog/hyper-local-marketing.jpg",
+                imageAlt: "Boudhanath stupa in Kathmandu at dusk, representing local cultural storytelling",
               },
               {
                 category: "Health-Tech",
-                tagColor: "var(--chip-mint)",
                 textColor: "#0C6C42",
                 title: "Bridging the Urban Healthcare Gap: The Architecture Behind Physio@Home",
                 excerpt: "A deep dive into our HIPAA-compliant scheduling protocols, location routing, and patient privacy frameworks in Nepal.",
                 date: "Aug 29, 2026",
                 readTime: "7 min read",
-                bannerBg: "linear-gradient(135deg, #7FAE3A 0%, #0F9488 100%)",
+                image: "/blog/physio-health-tech.jpg",
+                imageAlt: "Healthcare professional reviewing patient information on a tablet",
               },
               {
                 category: "Creative Media",
-                tagColor: "var(--chip-gold)",
                 textColor: "#9A690B",
                 title: "Cinematic Lighting on a Budget: Lessons from One Studio Kathmandu",
                 excerpt: "Behind the scenes on how our studio team crafts commercial-grade visuals using practical fixtures and clever framing.",
                 date: "Aug 14, 2026",
                 readTime: "4 min read",
-                bannerBg: "linear-gradient(135deg, #E0A930 0%, #0B1220 100%)",
+                image: "/blog/studio-lighting.jpg",
+                imageAlt: "Camera on a tripod ready for a studio video shoot",
               },
             ].map((post, idx) => (
               <div
@@ -665,54 +666,53 @@ export default function HomePage() {
                   justifyContent: "space-between",
                 }}
               >
-                {/* Colored Placeholder Image Block */}
-                <div
-                  style={{
-                    height: "170px",
-                    background: post.bannerBg,
-                    position: "relative",
-                    padding: "20px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <span
-                    style={{
-                      alignSelf: "flex-start",
-                      fontSize: "0.75rem",
-                      fontWeight: 700,
-                      backgroundColor: "rgba(255, 255, 255, 0.92)",
-                      color: post.textColor,
-                      padding: "4px 10px",
-                      borderRadius: "9999px",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.05em",
-                    }}
-                  >
-                    {post.category}
-                  </span>
-                  <div
-                    style={{
-                      color: "rgba(255, 255, 255, 0.85)",
-                      fontSize: "0.75rem",
-                      fontWeight: 500,
-                      display: "flex",
-                      gap: "12px",
-                    }}
-                  >
-                    <span>{post.date}</span>
-                    <span>•</span>
-                    <span>{post.readTime}</span>
+                <div className="blog-card-media">
+                  <Image
+                    src={post.image}
+                    alt={post.imageAlt}
+                    fill
+                    sizes="(max-width: 680px) 100vw, (max-width: 992px) 50vw, 33vw"
+                    className="blog-card-image"
+                  />
+                  <div className="blog-card-media-overlay" aria-hidden="true" />
+                  <div className="blog-card-media-meta">
+                    <span
+                      style={{
+                        alignSelf: "flex-start",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        backgroundColor: "rgba(255, 255, 255, 0.92)",
+                        color: post.textColor,
+                        padding: "4px 10px",
+                        borderRadius: "9999px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      {post.category}
+                    </span>
+                    <div
+                      style={{
+                        color: "rgba(255, 255, 255, 0.92)",
+                        fontSize: "0.75rem",
+                        fontWeight: 500,
+                        display: "flex",
+                        gap: "12px",
+                      }}
+                    >
+                      <span>{post.date}</span>
+                      <span>•</span>
+                      <span>{post.readTime}</span>
+                    </div>
                   </div>
                 </div>
 
-                <div style={{ padding: "22px" }}>
+                <div style={{ padding: "18px 20px" }}>
                   <h3
                     style={{
                       fontSize: "1.15rem",
                       lineHeight: 1.35,
-                      marginBottom: "10px",
+                      marginBottom: "8px",
                       color: "var(--color-ink)",
                     }}
                   >
@@ -723,7 +723,7 @@ export default function HomePage() {
                       fontSize: "0.875rem",
                       lineHeight: 1.6,
                       color: "var(--color-muted)",
-                      marginBottom: "18px",
+                      marginBottom: "12px",
                     }}
                   >
                     {post.excerpt}

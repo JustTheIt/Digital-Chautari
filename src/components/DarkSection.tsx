@@ -48,7 +48,7 @@ export default function DarkSection({
           <div
             style={{
               maxWidth: "720px",
-              marginBottom: "40px",
+              marginBottom: "22px",
             }}
           >
             {eyebrow && (
@@ -60,7 +60,7 @@ export default function DarkSection({
               style={{
                 color: "#FFFFFF",
                 fontSize: "2.15rem",
-                marginBottom: subtitle ? "14px" : "0",
+                marginBottom: subtitle ? "8px" : "0",
                 lineHeight: 1.25,
               }}
             >

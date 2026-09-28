@@ -23,7 +23,7 @@ export default function SectionHeader({
     <div
       style={{
         maxWidth: isCenter ? "760px" : "700px",
-        margin: isCenter ? "0 auto 40px auto" : "0 0 40px 0",
+        margin: isCenter ? "0 auto 22px auto" : "0 0 22px 0",
         textAlign: isCenter ? "center" : "left",
       }}
     >
@@ -31,7 +31,7 @@ export default function SectionHeader({
         <div
           className="eyebrow-pill"
           style={{
-            margin: isCenter ? "0 auto 16px auto" : "0 0 16px 0",
+            margin: isCenter ? "0 auto 10px auto" : "0 0 10px 0",
           }}
         >
           {eyebrow}
@@ -42,7 +42,7 @@ export default function SectionHeader({
         <h2
           style={{
             fontSize: "2.15rem",
-            marginBottom: subtitle ? "14px" : "0",
+            marginBottom: subtitle ? "8px" : "0",
             lineHeight: 1.25,
             color: "var(--color-ink)",
           }}

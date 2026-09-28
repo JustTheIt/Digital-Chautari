@@ -7,8 +7,8 @@ export default function Footer() {
       style={{
         backgroundColor: "var(--color-navy)",
         color: "var(--color-white)",
-        paddingTop: "64px",
-        paddingBottom: "36px",
+        paddingTop: "44px",
+        paddingBottom: "28px",
         borderTop: "1px solid var(--color-navy-border)",
       }}
     >
@@ -18,8 +18,8 @@ export default function Footer() {
           style={{
             display: "grid",
             gridTemplateColumns: "1.4fr 1fr 1fr 1.1fr",
-            gap: "40px",
-            marginBottom: "56px",
+            gap: "32px",
+            marginBottom: "36px",
           }}
           className="footer-grid"
         >
@@ -308,7 +308,7 @@ export default function Footer() {
           style={{
             height: "1px",
             backgroundColor: "var(--color-navy-border)",
-            marginBottom: "24px",
+            marginBottom: "18px",
           }}
         />
 

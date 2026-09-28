@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function KathmanduMap() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
       {/* Map Placeholder Card */}
       <div
         style={{
@@ -135,7 +135,7 @@ export default function KathmanduMap() {
           </div>
         </div>
 
-        <div style={{ padding: "20px 24px" }}>
+        <div style={{ padding: "16px 20px" }}>
           <div
             style={{
               display: "flex",
@@ -171,7 +171,7 @@ export default function KathmanduMap() {
               fontSize: "0.875rem",
               color: "var(--color-muted)",
               lineHeight: 1.5,
-              marginBottom: "14px",
+              marginBottom: "12px",
             }}
           >
             Baneshwor / Jhamsikhel Innovation Corridor, Kathmandu, Nepal. Our studio is open Sunday through Friday for scheduled client meetings and consultations.
@@ -192,7 +192,7 @@ export default function KathmanduMap() {
         style={{
           backgroundColor: "var(--color-navy)",
           borderRadius: "var(--radius-card)",
-          padding: "24px",
+          padding: "18px 20px",
           color: "#FFFFFF",
           border: "1px solid var(--color-navy-border)",
         }}
@@ -204,7 +204,7 @@ export default function KathmanduMap() {
             fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.05em",
-            marginBottom: "10px",
+            marginBottom: "8px",
           }}
         >
           <span>Need Quick Answers?</span>
@@ -214,7 +214,7 @@ export default function KathmanduMap() {
             color: "#FFFFFF",
             fontSize: "1.15rem",
             fontWeight: 700,
-            marginBottom: "8px",
+            marginBottom: "6px",
           }}
         >
           Frequently Asked Questions
@@ -224,7 +224,7 @@ export default function KathmanduMap() {
             color: "#94A3B8",
             fontSize: "0.875rem",
             lineHeight: 1.5,
-            marginBottom: "16px",
+            marginBottom: "14px",
           }}
         >
           Learn more about our pricing models, retainer agreements, project onboarding steps, and Physio@Home coverage.
@@ -249,13 +249,13 @@ export default function KathmanduMap() {
           backgroundColor: "var(--color-white)",
           border: "1px solid var(--color-line)",
           borderRadius: "var(--radius-card)",
-          padding: "24px",
+          padding: "18px 20px",
           boxShadow: "0 4px 20px -8px rgba(16, 24, 38, 0.06)",
         }}
       >
         <div
           style={{
-            marginBottom: "16px",
+            marginBottom: "12px",
           }}
         >
           <h4

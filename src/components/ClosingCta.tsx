@@ -82,7 +82,7 @@ export default function ClosingCta({
               fontWeight: 700,
               letterSpacing: "0.06em",
               textTransform: "uppercase",
-              marginBottom: "18px",
+              marginBottom: "12px",
               backdropFilter: "blur(8px)",
               border: "1px solid rgba(255, 255, 255, 0.2)",
             }}
@@ -96,7 +96,7 @@ export default function ClosingCta({
               fontSize: "2.4rem",
               fontWeight: 800,
               maxWidth: "760px",
-              marginBottom: "18px",
+              marginBottom: "12px",
               lineHeight: 1.2,
             }}
           >
@@ -108,7 +108,7 @@ export default function ClosingCta({
               color: "rgba(255, 255, 255, 0.88)",
               fontSize: "1.125rem",
               maxWidth: "620px",
-              marginBottom: "36px",
+              marginBottom: "24px",
               lineHeight: 1.6,
             }}
           >

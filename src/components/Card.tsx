@@ -45,7 +45,7 @@ export default function Card({
             style={{
               display: "flex",
               alignItems: "center",
-              marginBottom: "16px",
+              marginBottom: "10px",
             }}
           >
             <span

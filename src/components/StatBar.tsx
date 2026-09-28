@@ -31,7 +31,7 @@ export default function StatBar({
       className="stat-bar"
       style={{
         width: "100%",
-        maxWidth: "920px",
+        maxWidth: "100%",
         gridTemplateColumns: `repeat(${stats.length}, 1fr)`,
       }}
     >

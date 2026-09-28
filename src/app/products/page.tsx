@@ -49,9 +49,9 @@ export default function ProductsPage() {
           style={{
             display: "grid",
             gridTemplateColumns: "1.2fr 1fr",
-            gap: "40px",
+            gap: "28px",
             alignItems: "center",
-            marginTop: "16px",
+            marginTop: "8px",
           }}
           className="spotlight-grid"
         >
@@ -61,7 +61,7 @@ export default function ProductsPage() {
               style={{
                 fontSize: "1.5rem",
                 color: "#FFFFFF",
-                marginBottom: "16px",
+                marginBottom: "10px",
                 lineHeight: 1.3,
               }}
             >
@@ -73,7 +73,7 @@ export default function ProductsPage() {
                 color: "#94A3B8",
                 fontSize: "1rem",
                 lineHeight: 1.7,
-                marginBottom: "24px",
+                marginBottom: "16px",
               }}
             >
               Navigating Kathmandu traffic for daily physiotherapy after surgery, stroke, or sports trauma can be painful and exhausting. Physio@Home solves this urban bottleneck by combining certified on-site clinical therapists with smart mobile recovery protocols.
@@ -84,7 +84,7 @@ export default function ProductsPage() {
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: "14px",
-                marginBottom: "32px",
+                marginBottom: "20px",
               }}
               className="spotlight-features"
             >
@@ -165,7 +165,7 @@ export default function ProductsPage() {
               backgroundColor: "var(--color-navy-card)",
               border: "1px solid var(--color-navy-border)",
               borderRadius: "16px",
-              padding: "28px",
+              padding: "20px",
               boxShadow: "0 20px 40px rgba(0, 0, 0, 0.5)",
             }}
           >
@@ -174,9 +174,9 @@ export default function ProductsPage() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                paddingBottom: "16px",
+                paddingBottom: "14px",
                 borderBottom: "1px solid var(--color-navy-border)",
-                marginBottom: "20px",
+                marginBottom: "14px",
               }}
             >
               <div>
@@ -208,7 +208,7 @@ export default function ProductsPage() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "12px",
-                marginBottom: "20px",
+                marginBottom: "14px",
               }}
             >
               {[
