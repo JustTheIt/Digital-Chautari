@@ -5,21 +5,6 @@ import ProductSwitcher from "@/components/ProductSwitcher";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
-import {
-  HeartPulse,
-  Activity,
-  CheckCircle2,
-  ArrowRight,
-  ShieldCheck,
-  Smartphone,
-  Calendar,
-  Sparkles,
-  Users,
-  Compass,
-  MapPin,
-  TrendingUp,
-  Video,
-} from "lucide-react";
 
 export const metadata = {
   title: "Products & Ventures | Digital Chautari Kathmandu",
@@ -129,7 +114,15 @@ export default function ProductsPage() {
                       marginBottom: "4px",
                     }}
                   >
-                    <CheckCircle2 size={16} />
+                    <span
+                      style={{
+                        width: "5px",
+                        height: "5px",
+                        borderRadius: "50%",
+                        backgroundColor: "var(--color-accent-gold)",
+                        flexShrink: 0,
+                      }}
+                    />
                     <span>{feat.title}</span>
                   </div>
                   <div style={{ fontSize: "0.8125rem", color: "#94A3B8" }}>
@@ -149,7 +142,6 @@ export default function ProductsPage() {
                 }}
               >
                 <span>Request Early Access</span>
-                <ArrowRight size={16} />
               </Link>
               <Link
                 href="/contact"
@@ -187,28 +179,12 @@ export default function ProductsPage() {
                 marginBottom: "20px",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <div
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    borderRadius: "8px",
-                    backgroundColor: "rgba(15, 148, 136, 0.2)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--color-primary)",
-                  }}
-                >
-                  <Activity size={20} />
+              <div>
+                <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "#FFFFFF" }}>
+                  Kathmandu Valley Clinical Dispatch
                 </div>
-                <div>
-                  <div style={{ fontSize: "0.9rem", fontWeight: 700, color: "#FFFFFF" }}>
-                    Kathmandu Valley Clinical Dispatch
-                  </div>
-                  <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>
-                    Real-time therapist geo-routing
-                  </div>
+                <div style={{ fontSize: "0.75rem", color: "#94A3B8" }}>
+                  Real-time therapist geo-routing
                 </div>
               </div>
 
@@ -273,10 +249,8 @@ export default function ProductsPage() {
                 color: "#E2E8F0",
                 display: "flex",
                 alignItems: "center",
-                gap: "10px",
               }}
             >
-              <ShieldCheck size={18} color="var(--color-primary)" style={{ flexShrink: 0 }} />
               <span>Full compliance with Nepal Health Professional Council (NHPC) accreditation.</span>
             </div>
           </div>

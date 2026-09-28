@@ -3,12 +3,17 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight, Sparkles } from "lucide-react";
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
   const [scrolled, setScrolled] = useState(false);
+
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileMenuOpen(false);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +22,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close mobile menu on page transition
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -186,7 +186,6 @@ export default function Header() {
             }}
           >
             Contact Us
-            <ArrowRight size={15} />
           </Link>
         </div>
 
@@ -201,12 +200,14 @@ export default function Header() {
             background: "none",
             border: "1px solid var(--color-line)",
             borderRadius: "8px",
-            padding: "8px",
+            padding: "8px 14px",
             color: "var(--color-ink)",
             cursor: "pointer",
+            fontWeight: 600,
+            fontSize: "0.875rem",
           }}
         >
-          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileMenuOpen ? "Close" : "Menu"}
         </button>
       </div>
 
@@ -275,7 +276,6 @@ export default function Header() {
               }}
             >
               Contact Us
-              <ArrowRight size={16} />
             </Link>
           </div>
         </div>

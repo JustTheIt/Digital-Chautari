@@ -2,7 +2,6 @@ import React from "react";
 
 interface HeroPatternProps {
   eyebrowText?: string;
-  eyebrowIcon?: React.ReactNode;
   headingPrefix?: string;
   gradientWord?: string;
   headingSuffix?: string;
@@ -12,8 +11,7 @@ interface HeroPatternProps {
 }
 
 export default function HeroPattern({
-  eyebrowText = "👋 Welcome to Digital Chautari",
-  eyebrowIcon,
+  eyebrowText = "Welcome to Digital Chautari",
   headingPrefix = "We build",
   gradientWord = "digital bridges",
   headingSuffix = "between ideas and impact",
@@ -43,7 +41,6 @@ export default function HeroPattern({
         {/* Eyebrow Pill */}
         {eyebrowText && (
           <div className="eyebrow-pill">
-            {eyebrowIcon}
             <span>{eyebrowText}</span>
           </div>
         )}

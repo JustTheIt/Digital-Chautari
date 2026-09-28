@@ -5,36 +5,6 @@ import Card from "@/components/Card";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
-import {
-  TrendingUp,
-  Video,
-  Code2,
-  CheckCircle2,
-  ArrowRight,
-  Search,
-  Share2,
-  DollarSign,
-  BarChart3,
-  Film,
-  Camera,
-  PenTool,
-  FileText,
-  Smartphone,
-  HeartPulse,
-  Cloud,
-  Wrench,
-  ShoppingBag,
-  Building2,
-  GraduationCap,
-  Palmtree,
-  Newspaper,
-  ShieldCheck,
-  Zap,
-  Users,
-  Clock,
-  Sparkles,
-  Layers,
-} from "lucide-react";
 
 export const metadata = {
   title: "Services | Digital Chautari Kathmandu",
@@ -47,7 +17,6 @@ export default function ServicesPage() {
     {
       id: "marketing",
       title: "Digital Marketing",
-      icon: <TrendingUp size={24} />,
       chipColor: "teal" as const,
       eyebrow: "Acquisition & Performance",
       description:
@@ -61,29 +30,24 @@ export default function ServicesPage() {
         {
           title: "SEO & SEM",
           desc: "Target high-intent search queries to dominate Kathmandu & regional rankings.",
-          icon: <Search size={18} />,
         },
         {
           title: "Social Media Marketing",
           desc: "Engaging community building, viral content pacing, and organic brand authority.",
-          icon: <Share2 size={18} />,
         },
         {
           title: "Paid Advertising",
           desc: "High-converting PPC ads on Google, Meta, TikTok, and programmatic networks.",
-          icon: <DollarSign size={18} />,
         },
         {
           title: "Analytics & Reporting",
           desc: "Full attribution modeling, conversion rate tracking, and bi-weekly strategic reviews.",
-          icon: <BarChart3 size={18} />,
         },
       ],
     },
     {
       id: "content",
       title: "Content Creation Studio",
-      icon: <Video size={24} />,
       chipColor: "gold" as const,
       eyebrow: "Cinematic Media & Craft",
       description:
@@ -97,29 +61,24 @@ export default function ServicesPage() {
         {
           title: "Brand Storytelling",
           desc: "Emotional founder narratives, mini-documentaries, and corporate vision videos.",
-          icon: <Film size={18} />,
         },
         {
           title: "Video Production",
           desc: "4K commercial shoots, product reels, drone cinematography, and post-production.",
-          icon: <Camera size={18} />,
         },
         {
           title: "Graphic Design",
           desc: "Campaign visuals, billboards, packaging, and cohesive digital social assets.",
-          icon: <PenTool size={18} />,
         },
         {
           title: "Copywriting & PR",
           desc: "Persuasive web copy, press releases, thought leadership, and newsletter funnels.",
-          icon: <FileText size={18} />,
         },
       ],
     },
     {
       id: "software",
       title: "Software Development",
-      icon: <Code2 size={24} />,
       chipColor: "mint" as const,
       eyebrow: "Engineering & Architecture",
       description:
@@ -133,22 +92,18 @@ export default function ServicesPage() {
         {
           title: "Web & Mobile Apps",
           desc: "High-speed Single Page and Progressive Web Apps built with Next.js and React Native.",
-          icon: <Smartphone size={18} />,
         },
         {
           title: "Health-Tech Systems",
           desc: "Telehealth scheduling, patient record encryption, and home-care clinical workflows.",
-          icon: <HeartPulse size={18} />,
         },
         {
           title: "Cloud & API Integration",
           desc: "Scalable cloud microservices, payment gateway integrations, and data synchronization.",
-          icon: <Cloud size={18} />,
         },
         {
           title: "Maintenance & QA",
           desc: "24/7 uptime monitoring, security updates, latency optimization, and ongoing enhancements.",
-          icon: <Wrench size={18} />,
         },
       ],
     },
@@ -167,7 +122,6 @@ export default function ServicesPage() {
         <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
           <a href="#categories" className="btn-primary">
             <span>Explore Categories</span>
-            <ArrowRight size={16} />
           </a>
           <a href="#pricing" className="btn-secondary">
             <span>View Pricing Tiers</span>
@@ -186,7 +140,7 @@ export default function ServicesPage() {
           />
 
           <div style={{ display: "flex", flexDirection: "column", gap: "56px" }}>
-            {serviceCategories.map((category, idx) => (
+            {serviceCategories.map((category) => (
               <div
                 key={category.id}
                 style={{
@@ -202,26 +156,20 @@ export default function ServicesPage() {
                 }}
                 className="service-category-row"
               >
-                {/* Left: Icon, Title, Description, Highlights */}
+                {/* Left: Title, Description, Highlights */}
                 <div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "14px",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    <div className={`icon-chip chip-${category.chipColor}`}>
-                      {category.icon}
-                    </div>
+                  <div style={{ marginBottom: "16px" }}>
                     <span
                       style={{
+                        display: "inline-block",
                         fontSize: "0.8125rem",
                         fontWeight: 700,
                         textTransform: "uppercase",
                         letterSpacing: "0.06em",
                         color: "var(--color-primary-dark)",
+                        backgroundColor: `var(--chip-${category.chipColor})`,
+                        padding: "4px 12px",
+                        borderRadius: "9999px",
                       }}
                     >
                       {category.eyebrow}
@@ -271,10 +219,15 @@ export default function ServicesPage() {
                           color: "var(--color-ink)",
                         }}
                       >
-                        <CheckCircle2
-                          size={18}
-                          color="var(--color-primary)"
-                          style={{ flexShrink: 0, marginTop: "2px" }}
+                        <span
+                          style={{
+                            width: "6px",
+                            height: "6px",
+                            borderRadius: "50%",
+                            backgroundColor: "var(--color-primary)",
+                            flexShrink: 0,
+                            marginTop: "8px",
+                          }}
                         />
                         <span>{h}</span>
                       </div>
@@ -283,7 +236,6 @@ export default function ServicesPage() {
 
                   <Link href="/contact" className="btn-secondary">
                     <span>Inquire About {category.title}</span>
-                    <ArrowRight size={15} />
                   </Link>
                 </div>
 
@@ -304,38 +256,15 @@ export default function ServicesPage() {
                       }}
                       className="subservice-card"
                     >
-                      <div
+                      <h4
                         style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "10px",
-                          color: "var(--color-primary)",
+                          fontSize: "1rem",
+                          fontWeight: 700,
+                          color: "var(--color-ink)",
                         }}
                       >
-                        <div
-                          style={{
-                            width: "32px",
-                            height: "32px",
-                            borderRadius: "8px",
-                            backgroundColor: "var(--color-white)",
-                            border: "1px solid var(--color-line)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          {sub.icon}
-                        </div>
-                        <h4
-                          style={{
-                            fontSize: "1rem",
-                            fontWeight: 700,
-                            color: "var(--color-ink)",
-                          }}
-                        >
-                          {sub.title}
-                        </h4>
-                      </div>
+                        {sub.title}
+                      </h4>
                       <p
                         style={{
                           fontSize: "0.85rem",
@@ -450,7 +379,15 @@ export default function ServicesPage() {
                         color: "var(--color-ink)",
                       }}
                     >
-                      <CheckCircle2 size={16} color="var(--color-primary)" />
+                      <span
+                        style={{
+                          width: "5px",
+                          height: "5px",
+                          borderRadius: "50%",
+                          backgroundColor: "var(--color-primary)",
+                          flexShrink: 0,
+                        }}
+                      />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -463,7 +400,6 @@ export default function ServicesPage() {
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <span>Get Started</span>
-                <ArrowRight size={15} />
               </Link>
             </div>
 
@@ -498,7 +434,7 @@ export default function ServicesPage() {
                   boxShadow: "0 4px 12px rgba(224, 169, 48, 0.35)",
                 }}
               >
-                ★ Most Popular
+                Most Popular
               </div>
 
               <div>
@@ -572,7 +508,15 @@ export default function ServicesPage() {
                         color: "#FFFFFF",
                       }}
                     >
-                      <CheckCircle2 size={16} color="var(--color-accent-gold)" />
+                      <span
+                        style={{
+                          width: "5px",
+                          height: "5px",
+                          borderRadius: "50%",
+                          backgroundColor: "var(--color-accent-gold)",
+                          flexShrink: 0,
+                        }}
+                      />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -591,7 +535,6 @@ export default function ServicesPage() {
                 }}
               >
                 <span>Select Professional</span>
-                <ArrowRight size={15} />
               </Link>
             </div>
 
@@ -676,7 +619,15 @@ export default function ServicesPage() {
                         color: "var(--color-ink)",
                       }}
                     >
-                      <CheckCircle2 size={16} color="var(--color-primary)" />
+                      <span
+                        style={{
+                          width: "5px",
+                          height: "5px",
+                          borderRadius: "50%",
+                          backgroundColor: "var(--color-primary)",
+                          flexShrink: 0,
+                        }}
+                      />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -689,7 +640,6 @@ export default function ServicesPage() {
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <span>Talk to Leadership</span>
-                <ArrowRight size={15} />
               </Link>
             </div>
           </div>
@@ -710,37 +660,31 @@ export default function ServicesPage() {
           <div className="grid-3">
             {[
               {
-                icon: <HeartPulse size={22} />,
                 chipColor: "mint" as const,
                 title: "Healthcare",
                 desc: "Hospitals, physiotherapy clinics, telecare startups, and wellness brands.",
               },
               {
-                icon: <ShoppingBag size={22} />,
                 chipColor: "teal" as const,
                 title: "E-Commerce",
                 desc: "Direct-to-consumer lifestyle brands, specialty retailers, and marketplace sellers.",
               },
               {
-                icon: <Building2 size={22} />,
                 chipColor: "gold" as const,
                 title: "Real Estate",
                 desc: "Commercial developers, residential properties, and architectural design firms.",
               },
               {
-                icon: <GraduationCap size={22} />,
                 chipColor: "lilac" as const,
                 title: "Education",
                 desc: "Colleges, vocational training academies, and online ed-tech platforms.",
               },
               {
-                icon: <Palmtree size={22} />,
                 chipColor: "pink" as const,
                 title: "Tourism",
                 desc: "Himalayan trekking outfits, boutique heritage resorts, and travel agencies.",
               },
               {
-                icon: <Newspaper size={22} />,
                 chipColor: "teal" as const,
                 title: "Media",
                 desc: "Online publishers, content creators, podcast studios, and event organizers.",
@@ -748,7 +692,6 @@ export default function ServicesPage() {
             ].map((item, i) => (
               <Card
                 key={i}
-                icon={item.icon}
                 chipColor={item.chipColor}
                 title={item.title}
                 description={item.desc}
@@ -769,32 +712,26 @@ export default function ServicesPage() {
             {
               title: "Dedicated Project Manager",
               desc: "A single, responsive Kathmandu contact point who orchestrates engineers, designers, and media producers seamlessly.",
-              icon: <Users size={22} />,
             },
             {
               title: "Agile Development Cycle",
               desc: "Rapid two-week sprint cycles with live demo staging, constant backlog prioritization, and no bureaucratic bloat.",
-              icon: <Zap size={22} />,
             },
             {
               title: "Transparent Pricing",
               desc: "Clear upfront proposals, zero hidden agency fees, and predictable monthly retainers tailored to your scope.",
-              icon: <CheckCircle2 size={22} />,
             },
             {
               title: "Post-Launch Support",
               desc: "Proactive security patching, system health checks, continuous SEO reviews, and ongoing conversion optimization.",
-              icon: <Clock size={22} />,
             },
             {
               title: "Scalable Architecture",
               desc: "Code and campaigns structured to seamlessly handle 10x traffic spikes, user growth, and geographic expansion.",
-              icon: <Layers size={22} />,
             },
             {
               title: "Cross-Platform Expertise",
               desc: "Holistic integration across web, mobile, social algorithms, analytics tracking, and specialized clinical software.",
-              icon: <ShieldCheck size={22} />,
             },
           ].map((item, index) => (
             <div
@@ -802,21 +739,19 @@ export default function ServicesPage() {
               className="dc-card dc-card-navy"
               style={{ padding: "26px" }}
             >
-              <div
+              <span
                 style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "10px",
-                  backgroundColor: "rgba(15, 148, 136, 0.15)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "var(--color-primary)",
-                  marginBottom: "16px",
+                  display: "inline-block",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  color: "var(--color-accent-gold)",
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                  marginBottom: "12px",
                 }}
               >
-                {item.icon}
-              </div>
+                Pillar 0{index + 1}
+              </span>
               <h3
                 style={{
                   fontSize: "1.15rem",

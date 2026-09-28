@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
 
 interface ClosingCtaProps {
   title?: string;
@@ -75,7 +74,6 @@ export default function ClosingCta({
             style={{
               display: "inline-flex",
               alignItems: "center",
-              gap: "8px",
               padding: "6px 14px",
               borderRadius: "9999px",
               backgroundColor: "rgba(255, 255, 255, 0.15)",
@@ -89,7 +87,6 @@ export default function ClosingCta({
               border: "1px solid rgba(255, 255, 255, 0.2)",
             }}
           >
-            <Sparkles size={14} color="#E0A930" />
             <span>Digital Chautari • Kathmandu</span>
           </div>
 
@@ -134,7 +131,6 @@ export default function ClosingCta({
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "8px",
                 backgroundColor: "#FFFFFF",
                 color: "var(--color-ink)",
                 padding: "14px 28px",
@@ -147,7 +143,6 @@ export default function ClosingCta({
               className="cta-white-btn"
             >
               <span>{primaryBtnText}</span>
-              <ArrowRight size={16} />
             </Link>
 
             {secondaryBtnText && (
@@ -156,7 +151,6 @@ export default function ClosingCta({
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
-                  gap: "8px",
                   backgroundColor: "rgba(255, 255, 255, 0.12)",
                   color: "#FFFFFF",
                   border: "1px solid rgba(255, 255, 255, 0.3)",
@@ -177,4 +171,3 @@ export default function ClosingCta({
     </section>
   );
 }
-

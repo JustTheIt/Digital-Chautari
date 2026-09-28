@@ -1,14 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import {
-  MapPin,
-  Mail,
-  Phone,
-  ArrowUpRight,
-  Heart,
-  Globe,
-  ShieldCheck,
-} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -100,18 +91,9 @@ export default function Footer() {
                 color: "#CBD5E1",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                <MapPin size={16} color="var(--color-accent-gold)" />
-                <span>Kathmandu, Bagmati Province, Nepal</span>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                <Mail size={16} color="var(--color-primary)" />
-                <span>contact@digitalchautari.com</span>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                <Phone size={16} color="var(--color-leaf-green)" />
-                <span>+977 1-4422330 / 9801234567</span>
-              </div>
+              <div>Kathmandu, Bagmati Province, Nepal</div>
+              <div>contact@digitalchautari.com</div>
+              <div>+977 1-4422330 / 9801234567</div>
             </div>
           </div>
 
@@ -241,15 +223,11 @@ export default function Footer() {
                   href="/products"
                   style={{
                     color: "var(--color-accent-gold)",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "4px",
                     fontWeight: 600,
                   }}
                   className="footer-link"
                 >
                   Physio@Home
-                  <ArrowUpRight size={13} />
                 </Link>
               </li>
               <li>
@@ -289,16 +267,12 @@ export default function Footer() {
             >
               <div
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
                   color: "var(--color-accent-gold)",
                   fontWeight: 600,
                   fontSize: "0.875rem",
                   marginBottom: "6px",
                 }}
               >
-                <ShieldCheck size={16} />
                 <span>ISO 9001 Aligned</span>
               </div>
               <p style={{ fontSize: "0.8125rem", color: "#94A3B8", lineHeight: 1.5 }}>
@@ -365,7 +339,7 @@ export default function Footer() {
             }}
           >
             <span>Bridging ideas & impact</span>
-            <span style={{ color: "var(--color-accent-gold)" }}>★</span>
+            <span>•</span>
             <span>Kathmandu Tech Hub</span>
           </div>
         </div>

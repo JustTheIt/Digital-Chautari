@@ -6,38 +6,13 @@ import Card from "@/components/Card";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
-import {
-  TrendingUp,
-  Sparkles,
-  Cpu,
-  HeartHandshake,
-  CheckCircle2,
-  ArrowRight,
-  Package,
-  Video,
-  Activity,
-  HeartPulse,
-  ShoppingBag,
-  Building2,
-  GraduationCap,
-  Palmtree,
-  Newspaper,
-  Compass,
-  Palette,
-  Code2,
-  Rocket,
-  Star,
-  Calendar,
-  Clock,
-  ChevronRight,
-} from "lucide-react";
 
 export default function HomePage() {
   return (
     <>
       {/* 1. Hero Section */}
       <HeroPattern
-        eyebrowText="👋 Welcome to Digital Chautari"
+        eyebrowText="Welcome to Digital Chautari"
         headingPrefix="We build"
         gradientWord="digital bridges"
         headingSuffix="between ideas and impact"
@@ -54,7 +29,6 @@ export default function HomePage() {
         >
           <Link href="/services" className="btn-primary">
             <span>Explore Services</span>
-            <ArrowRight size={16} />
           </Link>
           <Link href="/products" className="btn-secondary">
             <span>View Products</span>
@@ -67,20 +41,14 @@ export default function HomePage() {
             {
               number: "3",
               label: "Ventures & Products",
-              icon: <Package size={22} />,
-              chipClass: "chip-teal",
             },
             {
               number: "6+",
               label: "Team Members in KTM",
-              icon: <HeartHandshake size={22} />,
-              chipClass: "chip-mint",
             },
             {
               number: "100%",
               label: "Client Commitment",
-              icon: <Sparkles size={22} />,
-              chipClass: "chip-gold",
             },
           ]}
         />
@@ -91,28 +59,24 @@ export default function HomePage() {
         <div className="container">
           <div className="grid-4">
             <Card
-              icon={<TrendingUp size={22} />}
               chipColor="mint"
               tag="ROI Focus"
               title="Growth-Driven"
               description="High-velocity performance marketing campaigns and full-funnel customer acquisition designed to scale revenue consistently."
             />
             <Card
-              icon={<Sparkles size={22} />}
               chipColor="teal"
               tag="Craft & Media"
               title="Creative-First"
               description="Compelling brand narratives, cinematic 4K video storytelling, and design aesthetics that captivate modern audiences."
             />
             <Card
-              icon={<Cpu size={22} />}
               chipColor="gold"
               tag="Engineering"
               title="Tech-Powered"
               description="Resilient full-stack web platforms, modern cloud architectures, and specialized health-tech clinical applications."
             />
             <Card
-              icon={<HeartHandshake size={22} />}
               chipColor="lilac"
               tag="Collaboration"
               title="Client-Centric"
@@ -148,6 +112,7 @@ export default function HomePage() {
               >
                 A <span className="gradient-text">Chautari</span> where ideas meet execution
               </h2>
+
               <p
                 style={{
                   fontSize: "1.05rem",
@@ -195,10 +160,14 @@ export default function HomePage() {
                       color: "var(--color-ink)",
                     }}
                   >
-                    <CheckCircle2
-                      size={18}
-                      color="var(--color-primary)"
-                      style={{ flexShrink: 0 }}
+                    <span
+                      style={{
+                        width: "6px",
+                        height: "6px",
+                        borderRadius: "50%",
+                        backgroundColor: "var(--color-primary)",
+                        flexShrink: 0,
+                      }}
                     />
                     <span>{item}</span>
                   </div>
@@ -207,14 +176,12 @@ export default function HomePage() {
 
               <Link href="/about" className="btn-primary">
                 <span>Meet the Team</span>
-                <ArrowRight size={16} />
               </Link>
             </div>
 
             {/* Right Side: 2x2 Grid of Service Teaser Cards */}
             <div className="grid-2">
               <Card
-                icon={<TrendingUp size={20} />}
                 chipColor="teal"
                 tag="Growth"
                 title="Digital Marketing"
@@ -223,7 +190,6 @@ export default function HomePage() {
                 linkText="View Service"
               />
               <Card
-                icon={<Video size={20} />}
                 chipColor="gold"
                 tag="Studio"
                 title="Content Creation"
@@ -232,7 +198,6 @@ export default function HomePage() {
                 linkText="View Service"
               />
               <Card
-                icon={<Code2 size={20} />}
                 chipColor="mint"
                 tag="Software"
                 title="Software Dev"
@@ -241,7 +206,6 @@ export default function HomePage() {
                 linkText="View Service"
               />
               <Card
-                icon={<Palette size={20} />}
                 chipColor="lilac"
                 tag="Identity"
                 title="Branding & Design"
@@ -322,7 +286,6 @@ export default function HomePage() {
 
           <div className="grid-3">
             <Card
-              icon={<TrendingUp size={22} />}
               chipColor="teal"
               tag="Performance Marketing"
               title="Eco Creative Marketing Agency"
@@ -331,7 +294,6 @@ export default function HomePage() {
               linkText="Learn more"
             />
             <Card
-              icon={<Video size={22} />}
               chipColor="gold"
               tag="Creative Studio"
               title="One Content Creation Studio"
@@ -340,7 +302,6 @@ export default function HomePage() {
               linkText="Learn more"
             />
             <Card
-              icon={<Activity size={22} />}
               chipColor="mint"
               tag="Health-Tech Venture"
               title="Physio@Home"
@@ -369,37 +330,31 @@ export default function HomePage() {
           <div className="grid-3">
             {[
               {
-                icon: <HeartPulse size={22} />,
                 title: "Healthcare & Clinics",
                 chip: "mint" as const,
                 desc: "Telehealth portals, patient management systems, and specialized medical practice outreach campaigns.",
               },
               {
-                icon: <ShoppingBag size={22} />,
                 title: "E-Commerce & Retail",
                 chip: "teal" as const,
                 desc: "High-converting online storefronts, omnichannel catalog marketing, and automated conversion funnels.",
               },
               {
-                icon: <Building2 size={22} />,
                 title: "Real Estate & Architecture",
                 chip: "gold" as const,
                 desc: "Cinematic architectural walkthroughs, lead qualification pipelines, and interactive property listings.",
               },
               {
-                icon: <GraduationCap size={22} />,
                 title: "Education & EdTech",
                 chip: "lilac" as const,
                 desc: "Student enrollment funnels, university portal interfaces, and engaging visual learning media.",
               },
               {
-                icon: <Palmtree size={22} />,
                 title: "Tourism & Hospitality",
                 chip: "pink" as const,
                 desc: "Himalayan travel storytelling, luxury resort booking funnels, and international guest acquisition.",
               },
               {
-                icon: <Newspaper size={22} />,
                 title: "Media & Publishing",
                 chip: "teal" as const,
                 desc: "High-traffic editorial platforms, subscription gating, and dynamic multi-format digital publishing.",
@@ -407,7 +362,6 @@ export default function HomePage() {
             ].map((sector, i) => (
               <Card
                 key={i}
-                icon={sector.icon}
                 chipColor={sector.chip}
                 title={sector.title}
                 description={sector.desc}
@@ -429,25 +383,21 @@ export default function HomePage() {
               step: "01",
               title: "Discover",
               desc: "Collaborative discovery workshops to unearth deep business objectives, competitor landscape, and user persona insights.",
-              icon: <Compass size={22} />,
             },
             {
               step: "02",
               title: "Design",
               desc: "Wireframing user journeys, architecting aesthetic design systems, and rapid prototyping for intuitive interaction.",
-              icon: <Palette size={22} />,
             },
             {
               step: "03",
               title: "Develop",
               desc: "Modern full-stack engineering with clean code, test-driven reliability, SEO optimization, and agile sprint cadence.",
-              icon: <Code2 size={22} />,
             },
             {
               step: "04",
               title: "Deliver",
               desc: "Seamless cloud deployment, hands-on team training, continuous performance monitoring, and post-launch scaling.",
-              icon: <Rocket size={22} />,
             },
           ].map((item, index) => (
             <div
@@ -479,20 +429,24 @@ export default function HomePage() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      fontFamily: "var(--font-heading)",
+                      fontSize: "1.15rem",
+                      fontWeight: 800,
                       color: "var(--color-primary)",
                     }}
                   >
-                    {item.icon}
+                    {item.step}
                   </div>
                   <span
                     style={{
-                      fontFamily: "var(--font-heading)",
-                      fontSize: "1.25rem",
-                      fontWeight: 800,
+                      fontSize: "0.75rem",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
                       color: "var(--color-accent-gold)",
                     }}
                   >
-                    {item.step}
+                    Phase {item.step}
                   </span>
                 </div>
 
@@ -574,22 +528,23 @@ export default function HomePage() {
                 }}
               >
                 <div>
-                  {/* 5-star rating */}
+                  {/* Verified Rating Pill */}
                   <div
                     style={{
-                      display: "flex",
-                      gap: "4px",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      padding: "4px 10px",
+                      borderRadius: "9999px",
+                      backgroundColor: "rgba(224, 169, 48, 0.15)",
+                      color: "var(--color-accent-gold)",
+                      fontSize: "0.75rem",
+                      fontWeight: 800,
+                      letterSpacing: "0.04em",
+                      textTransform: "uppercase",
                       marginBottom: "16px",
                     }}
                   >
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        size={16}
-                        fill="var(--color-accent-gold)"
-                        color="var(--color-accent-gold)"
-                      />
-                    ))}
+                    5.0 Rating • Verified Client
                   </div>
 
                   <p
@@ -601,7 +556,7 @@ export default function HomePage() {
                       marginBottom: "24px",
                     }}
                   >
-                    "{t.quote}"
+                    &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
@@ -778,7 +733,6 @@ export default function HomePage() {
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
-                      gap: "6px",
                       fontFamily: "var(--font-heading)",
                       fontSize: "0.875rem",
                       fontWeight: 700,
@@ -787,7 +741,6 @@ export default function HomePage() {
                     }}
                   >
                     <span>Read more</span>
-                    <ArrowRight size={14} />
                   </div>
                 </div>
               </div>
@@ -805,7 +758,6 @@ export default function HomePage() {
         secondaryBtnText="View Services"
         secondaryBtnHref="/services"
       />
-
     </>
   );
 }

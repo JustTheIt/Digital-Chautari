@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export type ChipColor = "mint" | "teal" | "gold" | "lilac" | "pink";
 
 interface CardProps {
-  icon?: React.ReactNode;
   chipColor?: ChipColor;
   tag?: string;
   title: string;
@@ -19,7 +17,6 @@ interface CardProps {
 }
 
 export default function Card({
-  icon,
   chipColor = "mint",
   tag,
   title,
@@ -31,8 +28,6 @@ export default function Card({
   className = "",
   style,
 }: CardProps) {
-  const chipClass = `chip-${chipColor}`;
-
   return (
     <div
       className={`dc-card ${isDark ? "dc-card-navy" : ""} ${className}`}
@@ -44,17 +39,15 @@ export default function Card({
       }}
     >
       <div>
-        {/* Top Header: Icon Chip and optional Tag */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: "18px",
-          }}
-        >
-          {icon && <div className={`icon-chip ${chipClass}`}>{icon}</div>}
-          {tag && (
+        {/* Optional Tag */}
+        {tag && (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: "16px",
+            }}
+          >
             <span
               style={{
                 fontSize: "0.75rem",
@@ -65,7 +58,7 @@ export default function Card({
                 borderRadius: "9999px",
                 backgroundColor: isDark
                   ? "rgba(224, 169, 48, 0.15)"
-                  : "rgba(15, 148, 136, 0.08)",
+                  : `var(--chip-${chipColor})`,
                 color: isDark
                   ? "var(--color-accent-gold)"
                   : "var(--color-primary-dark)",
@@ -73,8 +66,8 @@ export default function Card({
             >
               {tag}
             </span>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Card Title */}
         <h3
@@ -121,7 +114,6 @@ export default function Card({
             }}
           >
             <span>{linkText}</span>
-            <ArrowRight size={14} />
           </Link>
         </div>
       )}

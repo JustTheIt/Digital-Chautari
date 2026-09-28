@@ -1,29 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import HeroPattern from "@/components/HeroPattern";
 import Card from "@/components/Card";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
-import {
-  Users,
-  Compass,
-  Heart,
-  Lightbulb,
-  Award,
-  Handshake,
-  ShieldCheck,
-  Lock,
-  Globe2,
-  Network,
-  ArrowRight,
-  CheckCircle2,
-  Calendar,
-  Sparkles,
-  MapPin,
-  Briefcase,
-  Target,
-} from "lucide-react";
 
 export const metadata = {
   title: "About Us | Digital Chautari Kathmandu",
@@ -302,33 +282,26 @@ export default function AboutPage() {
               >
                 <div
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    color: "var(--color-primary-dark)",
+                    fontFamily: "var(--font-heading)",
+                    fontSize: "2.4rem",
+                    fontWeight: 800,
+                    color: "var(--color-primary)",
+                    lineHeight: 1,
                     marginBottom: "8px",
                   }}
                 >
-                  <MapPin size={24} />
+                  KTM
                 </div>
                 <div
                   style={{
-                    fontFamily: "var(--font-heading)",
-                    fontSize: "1.45rem",
-                    fontWeight: 800,
-                    lineHeight: 1.2,
-                    marginBottom: "4px",
+                    fontSize: "1rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.02em",
                   }}
                 >
                   Kathmandu
                 </div>
-                <div
-                  style={{
-                    fontSize: "0.9375rem",
-                    fontWeight: 600,
-                    color: "var(--color-muted)",
-                  }}
-                >
+                <div style={{ fontSize: "0.8125rem", color: "var(--color-muted)", marginTop: "4px" }}>
                   Headquarters
                 </div>
               </div>
@@ -397,27 +370,32 @@ export default function AboutPage() {
                 borderLeft: "4px solid var(--color-primary)",
               }}
             >
-              <div
+              <span
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "12px",
-                  marginBottom: "16px",
+                  display: "inline-block",
+                  fontSize: "0.75rem",
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.06em",
+                  color: "var(--color-primary-dark)",
+                  backgroundColor: "var(--chip-teal)",
+                  padding: "4px 10px",
+                  borderRadius: "9999px",
+                  marginBottom: "12px",
                 }}
               >
-                <div className="icon-chip chip-teal">
-                  <Target size={22} />
-                </div>
-                <h3
-                  style={{
-                    fontSize: "1.45rem",
-                    fontWeight: 700,
-                    color: "var(--color-ink)",
-                  }}
-                >
-                  Our Mission
-                </h3>
-              </div>
+                Mission
+              </span>
+              <h3
+                style={{
+                  fontSize: "1.45rem",
+                  fontWeight: 700,
+                  color: "var(--color-ink)",
+                  marginBottom: "12px",
+                }}
+              >
+                Our Mission
+              </h3>
               <p
                 style={{
                   fontSize: "1.05rem",
@@ -437,27 +415,32 @@ export default function AboutPage() {
                 borderLeft: "4px solid var(--color-accent-gold)",
               }}
             >
-              <div
+              <span
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "12px",
-                  marginBottom: "16px",
+                  display: "inline-block",
+                  fontSize: "0.75rem",
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.06em",
+                  color: "#9A690B",
+                  backgroundColor: "var(--chip-gold)",
+                  padding: "4px 10px",
+                  borderRadius: "9999px",
+                  marginBottom: "12px",
                 }}
               >
-                <div className="icon-chip chip-gold">
-                  <Lightbulb size={22} />
-                </div>
-                <h3
-                  style={{
-                    fontSize: "1.45rem",
-                    fontWeight: 700,
-                    color: "var(--color-ink)",
-                  }}
-                >
-                  Our Vision
-                </h3>
-              </div>
+                Vision
+              </span>
+              <h3
+                style={{
+                  fontSize: "1.45rem",
+                  fontWeight: 700,
+                  color: "var(--color-ink)",
+                  marginBottom: "12px",
+                }}
+              >
+                Our Vision
+              </h3>
               <p
                 style={{
                   fontSize: "1.05rem",
@@ -485,28 +468,24 @@ export default function AboutPage() {
 
           <div className="grid-4">
             <Card
-              icon={<Heart size={22} />}
               chipColor="mint"
               tag="Belief"
               title="Passion"
               description="An unwavering devotion to creative expression, technological elegance, and community upliftment in everything we ship."
             />
             <Card
-              icon={<Sparkles size={22} />}
               chipColor="teal"
               tag="Originality"
               title="Creativity"
               description="Rejecting cookie-cutter formulas to discover bold, authentic solutions that stand out on global screens."
             />
             <Card
-              icon={<Award size={22} />}
               chipColor="gold"
               tag="Standard"
               title="Excellence"
               description="Meticulous attention to craft, from pixel alignments and load times to compassionate patient clinical care."
             />
             <Card
-              icon={<Handshake size={22} />}
               chipColor="lilac"
               tag="Synergy"
               title="Collaboration"
@@ -527,22 +506,18 @@ export default function AboutPage() {
             {
               title: "ISO 9001 Ready",
               desc: "Structured quality management systems, standardized operational checklists, and continuous process optimization.",
-              icon: <ShieldCheck size={22} />,
             },
             {
               title: "Data Protection",
               desc: "HIPAA-ready clinical data encryption, GDPR-aligned patient confidentiality, and secure cloud tokenization.",
-              icon: <Lock size={22} />,
             },
             {
               title: "Global Delivery",
               desc: "World-class engineering standards capable of delivering high-traffic platforms for international and regional clients.",
-              icon: <Globe2 size={22} />,
             },
             {
               title: "Pan-Nepal Network",
               desc: "Deep roots across Nepal with certified partner networks, local language fluency, and boots-on-the-ground support.",
-              icon: <Network size={22} />,
             },
           ].map((item, index) => (
             <div
@@ -550,21 +525,19 @@ export default function AboutPage() {
               className="dc-card dc-card-navy"
               style={{ padding: "26px" }}
             >
-              <div
+              <span
                 style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "10px",
-                  backgroundColor: "rgba(15, 148, 136, 0.15)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "var(--color-primary)",
-                  marginBottom: "16px",
+                  display: "inline-block",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  color: "var(--color-accent-gold)",
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                  marginBottom: "12px",
                 }}
               >
-                {item.icon}
-              </div>
+                Standard 0{index + 1}
+              </span>
               <h3
                 style={{
                   fontSize: "1.15rem",
@@ -674,12 +647,8 @@ export default function AboutPage() {
                     fontSize: "0.75rem",
                     fontWeight: 600,
                     color: "var(--color-ink)",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "6px",
                   }}
                 >
-                  <Sparkles size={14} color="var(--color-accent-gold)" />
                   <span>{member.strengths}</span>
                 </div>
               </div>

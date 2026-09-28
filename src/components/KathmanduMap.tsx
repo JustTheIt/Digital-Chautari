@@ -1,14 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import {
-  MapPin,
-  Clock,
-  Send,
-  HelpCircle,
-  ArrowRight,
-  Shield,
-  Compass,
-} from "lucide-react";
 
 export default function KathmanduMap() {
   return (
@@ -117,11 +108,14 @@ export default function KathmanduMap() {
                 alignItems: "center",
                 justifyContent: "center",
                 color: "#FFFFFF",
+                fontFamily: "var(--font-heading)",
+                fontWeight: 800,
+                fontSize: "0.95rem",
                 boxShadow: "0 8px 20px rgba(15, 148, 136, 0.4)",
                 animation: "pulse 2s infinite ease-in-out",
               }}
             >
-              <MapPin size={24} />
+              DC
             </div>
             <div
               style={{
@@ -186,18 +180,14 @@ export default function KathmanduMap() {
             style={{
               fontSize: "0.8125rem",
               color: "var(--color-muted)",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
             }}
           >
-            <Compass size={15} color="var(--color-accent-gold)" />
-            <span>27.6915° N, 85.3206° E</span>
+            Location: 27.6915° N, 85.3206° E
           </div>
         </div>
       </div>
 
-      {/* Dark "Need quick answers? Visit FAQ page" Callout */}
+      {/* Dark FAQ Callout */}
       <div
         style={{
           backgroundColor: "var(--color-navy)",
@@ -209,9 +199,6 @@ export default function KathmanduMap() {
       >
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
             color: "var(--color-accent-gold)",
             fontSize: "0.8125rem",
             fontWeight: 700,
@@ -220,7 +207,6 @@ export default function KathmanduMap() {
             marginBottom: "10px",
           }}
         >
-          <HelpCircle size={16} />
           <span>Need Quick Answers?</span>
         </div>
         <h4
@@ -248,14 +234,12 @@ export default function KathmanduMap() {
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: "6px",
             color: "var(--color-accent-gold)",
             fontSize: "0.875rem",
             fontWeight: 700,
           }}
         >
           <span>Visit FAQ & Pricing Section</span>
-          <ArrowRight size={14} />
         </Link>
       </div>
 
@@ -271,13 +255,9 @@ export default function KathmanduMap() {
       >
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
             marginBottom: "16px",
           }}
         >
-          <Clock size={18} color="var(--color-primary)" />
           <h4
             style={{
               fontSize: "1rem",

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 const projectTypes = [
   "Digital Marketing",
@@ -52,9 +51,9 @@ export default function ContactForm() {
         projectType: "Digital Marketing",
         message: "",
       });
-    } catch (err: any) {
+    } catch (err: unknown) {
       setErrorMessage(
-        err.message || "An error occurred while sending your message. Please try again."
+        err instanceof Error ? err.message : "An error occurred while sending your message. Please try again."
       );
     } finally {
       setLoading(false);
@@ -101,14 +100,10 @@ export default function ContactForm() {
             borderRadius: "10px",
             padding: "16px 20px",
             marginBottom: "24px",
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "12px",
             color: "#0C6C42",
           }}
         >
-          <CheckCircle2 size={20} style={{ flexShrink: 0, marginTop: "2px" }} />
-          <div style={{ fontSize: "0.9375rem", lineHeight: 1.5 }}>
+          <div style={{ fontSize: "0.9375rem", lineHeight: 1.5, fontWeight: 500 }}>
             {successMessage}
           </div>
         </div>
@@ -122,14 +117,10 @@ export default function ContactForm() {
             borderRadius: "10px",
             padding: "16px 20px",
             marginBottom: "24px",
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "12px",
             color: "#9E1C38",
           }}
         >
-          <AlertCircle size={20} style={{ flexShrink: 0, marginTop: "2px" }} />
-          <div style={{ fontSize: "0.9375rem", lineHeight: 1.5 }}>
+          <div style={{ fontSize: "0.9375rem", lineHeight: 1.5, fontWeight: 500 }}>
             {errorMessage}
           </div>
         </div>
@@ -347,17 +338,7 @@ export default function ContactForm() {
               cursor: loading ? "not-allowed" : "pointer",
             }}
           >
-            {loading ? (
-              <>
-                <Loader2 size={18} className="animate-spin" />
-                <span>Sending Message...</span>
-              </>
-            ) : (
-              <>
-                <span>Send Message</span>
-                <Send size={16} />
-              </>
-            )}
+            {loading ? "Sending Message..." : "Send Message"}
           </button>
         </div>
       </form>

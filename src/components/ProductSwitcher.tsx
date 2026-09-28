@@ -2,23 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import {
-  TrendingUp,
-  Video,
-  Activity,
-  ArrowRight,
-  CheckCircle2,
-  Calendar,
-  Clock,
-  MapPin,
-  Sparkles,
-  BarChart3,
-  Layers,
-  Play,
-  Film,
-  UserCheck,
-  HeartPulse,
-} from "lucide-react";
 
 interface ProductData {
   id: string;
@@ -97,7 +80,7 @@ const products: ProductData[] = [
     ],
     metrics: [
       { label: "Home Sessions", value: "1,400+" },
-      { label: "Patient Rating", value: "4.9★" },
+      { label: "Patient Rating", value: "4.9 / 5.0" },
       { label: "KTM Valley Coverage", value: "100%" },
     ],
     ctaText: "Explore Physio@Home Portal",
@@ -133,8 +116,7 @@ export default function ProductSwitcher() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "8px",
-                padding: "12px 22px",
+                padding: "12px 24px",
                 borderRadius: "9999px",
                 fontFamily: "var(--font-heading)",
                 fontSize: "0.9375rem",
@@ -151,9 +133,6 @@ export default function ProductSwitcher() {
                 transition: "all 0.2s ease",
               }}
             >
-              {product.id === "eco-creative" && <TrendingUp size={16} />}
-              {product.id === "one-content" && <Video size={16} />}
-              {product.id === "physio-at-home" && <Activity size={16} />}
               <span>{product.tabLabel}</span>
             </button>
           );
@@ -247,10 +226,15 @@ export default function ProductSwitcher() {
                   color: "var(--color-ink)",
                 }}
               >
-                <CheckCircle2
-                  size={18}
-                  color="var(--color-primary)"
-                  style={{ flexShrink: 0, marginTop: "2px" }}
+                <span
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    backgroundColor: "var(--color-primary)",
+                    flexShrink: 0,
+                    marginTop: "8px",
+                  }}
                 />
                 <span>{item}</span>
               </div>
@@ -300,7 +284,6 @@ export default function ProductSwitcher() {
           {/* CTA Button */}
           <Link href={currentProduct.ctaHref} className="btn-primary">
             <span>{currentProduct.ctaText}</span>
-            <ArrowRight size={16} />
           </Link>
         </div>
 
@@ -435,8 +418,7 @@ export default function ProductSwitcher() {
                   marginBottom: "18px",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <Film size={16} color="var(--color-accent-gold)" />
+                <div>
                   <span style={{ fontSize: "0.8125rem", fontWeight: 700 }}>
                     ONE STUDIO • TIMELINE MASTER
                   </span>
@@ -480,20 +462,21 @@ export default function ProductSwitcher() {
                 />
                 <div
                   style={{
-                    width: "48px",
-                    height: "48px",
-                    borderRadius: "50%",
-                    backgroundColor: "rgba(15, 148, 136, 0.8)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    padding: "8px 18px",
+                    borderRadius: "9999px",
+                    backgroundColor: "rgba(15, 148, 136, 0.85)",
+                    color: "#FFFFFF",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
                     cursor: "pointer",
                     position: "relative",
                     zIndex: 2,
                     boxShadow: "0 0 20px rgba(15, 148, 136, 0.6)",
                   }}
                 >
-                  <Play size={20} color="#FFFFFF" style={{ marginLeft: "3px" }} />
+                  Preview Cut
                 </div>
                 <div
                   style={{
@@ -554,8 +537,7 @@ export default function ProductSwitcher() {
                   marginBottom: "18px",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <HeartPulse size={18} color="#10B981" />
+                <div>
                   <span style={{ fontSize: "0.8125rem", fontWeight: 700 }}>
                     PHYSIO@HOME • PATIENT PORTAL
                   </span>
@@ -618,14 +600,8 @@ export default function ProductSwitcher() {
                     borderTop: "1px solid var(--color-navy-border)",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                    <Calendar size={13} color="var(--color-accent-gold)" />
-                    <span>Today, 4:30 PM</span>
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                    <MapPin size={13} color="var(--color-primary)" />
-                    <span>Jhamsikhel, Lalitpur</span>
-                  </div>
+                  <div>Time: Today, 4:30 PM</div>
+                  <div>Location: Jhamsikhel, Lalitpur</div>
                 </div>
               </div>
 
