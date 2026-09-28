@@ -14,7 +14,7 @@ export const metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Bishwa Sharma",
+      name: "xyz",
       role: "Founder & CEO",
       bio: "Visionary product architect leading Digital Chautari's venture roadmap and strategic engineering in Kathmandu.",
       strengths: "Product Strategy • Venture Building • Systems Architecture",
@@ -22,7 +22,7 @@ export default function AboutPage() {
       chip: "chip-teal",
     },
     {
-      name: "Aayush Maharjan",
+      name: "xyz",
       role: "Co-Founder & COO",
       bio: "Operations spearhead overseeing agency delivery pipelines, team performance, and strategic enterprise client alliances.",
       strengths: "Operational Scaling • Client Success • Resource Governance",
@@ -30,7 +30,7 @@ export default function AboutPage() {
       chip: "chip-mint",
     },
     {
-      name: "Sujal Shrestha",
+      name: "xyz",
       role: "Front-End Developer",
       bio: "Design-minded engineer obsessed with UI micro-interactions, Next.js optimization, and accessible responsive web systems.",
       strengths: "Next.js • TypeScript • Design Systems • CWV Performance",
@@ -38,7 +38,7 @@ export default function AboutPage() {
       chip: "chip-gold",
     },
     {
-      name: "Prashant Karki",
+      name: "xyz",
       role: "Back-End Developer",
       bio: "Specializes in secure API microservices, distributed data schemas, and HIPAA-compliant health telemetry for Physio@Home.",
       strengths: "Node.js • Cloud Architecture • SQL/NoSQL • Security",
@@ -46,7 +46,7 @@ export default function AboutPage() {
       chip: "chip-lilac",
     },
     {
-      name: "Roshani Thapa",
+      name: "xyz",
       role: "Marketing Lead",
       bio: "Performance growth strategist leading Eco Creative's omnichannel campaigns, paid ads attribution, and search dominance.",
       strengths: "PPC Growth • SEO • Attribution Analytics • Creative Direction",
@@ -54,7 +54,7 @@ export default function AboutPage() {
       chip: "chip-pink",
     },
     {
-      name: "Kiran Basnet",
+      name: "xyz",
       role: "Sales Executive",
       bio: "Customer-first advocate partnering with businesses across Nepal to identify tailored technology and marketing solutions.",
       strengths: "B2B Solutions • Deal Structuring • Consultative Discovery",
@@ -62,7 +62,7 @@ export default function AboutPage() {
       chip: "chip-teal",
     },
     {
-      name: "Samir Adhikari",
+      name: "xyz",
       role: "Business Development Officer",
       bio: "Cultivates health-tech institutional partnerships, clinic associations, and strategic regional expansion throughout the Valley.",
       strengths: "Strategic Partnerships • Health-Tech Alliances • Regional Scale",
