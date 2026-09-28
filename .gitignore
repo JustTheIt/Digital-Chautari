@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Next.js may recreate these during `next dev` in an AI editor.
+# They are editor hints, not part of the app — keep them out of submissions.
+AGENTS.md
+CLAUDE.md
