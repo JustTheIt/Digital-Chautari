@@ -4,6 +4,9 @@ import Card from "@/components/Card";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
+import { getInitialsFromName } from "@/lib/getInitialsFromName";
+import IconChip from "@/components/IconChip";
+import { getIconForTitle } from "@/lib/sectionIcons";
 
 export const metadata = {
   title: "About Us | Digital Chautari Kathmandu",
@@ -14,59 +17,52 @@ export const metadata = {
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "xyz",
+      name: "Anisha Rajbhandari",
       role: "Founder & CEO",
       bio: "Visionary product architect leading Digital Chautari's venture roadmap and strategic engineering in Kathmandu.",
       strengths: "Product Strategy • Venture Building • Systems Architecture",
-      initials: "BS",
       chip: "chip-teal",
     },
     {
-      name: "xyz",
+      name: "Sagar Thapa",
       role: "Co-Founder & COO",
       bio: "Operations spearhead overseeing agency delivery pipelines, team performance, and strategic enterprise client alliances.",
       strengths: "Operational Scaling • Client Success • Resource Governance",
-      initials: "AM",
       chip: "chip-mint",
     },
     {
-      name: "xyz",
+      name: "Priya Karki",
       role: "Front-End Developer",
       bio: "Design-minded engineer obsessed with UI micro-interactions, Next.js optimization, and accessible responsive web systems.",
       strengths: "Next.js • TypeScript • Design Systems • CWV Performance",
-      initials: "SS",
       chip: "chip-gold",
     },
     {
-      name: "xyz",
+      name: "Nischal Adhikari",
       role: "Back-End Developer",
       bio: "Specializes in secure API microservices, distributed data schemas, and HIPAA-compliant health telemetry for Physio@Home.",
       strengths: "Node.js • Cloud Architecture • SQL/NoSQL • Security",
-      initials: "PK",
       chip: "chip-lilac",
     },
     {
-      name: "xyz",
+      name: "Rubina Gurung",
       role: "Marketing Lead",
       bio: "Performance growth strategist leading Eco Creative's omnichannel campaigns, paid ads attribution, and search dominance.",
       strengths: "PPC Growth • SEO • Attribution Analytics • Creative Direction",
-      initials: "RT",
       chip: "chip-pink",
     },
     {
-      name: "xyz",
+      name: "Bikash Shrestha",
       role: "Sales Executive",
       bio: "Customer-first advocate partnering with businesses across Nepal to identify tailored technology and marketing solutions.",
       strengths: "B2B Solutions • Deal Structuring • Consultative Discovery",
-      initials: "KB",
       chip: "chip-teal",
     },
     {
-      name: "xyz",
+      name: "Anjali Tamang",
       role: "Business Development Officer",
       bio: "Cultivates health-tech institutional partnerships, clinic associations, and strategic regional expansion throughout the Valley.",
       strengths: "Strategic Partnerships • Health-Tech Alliances • Regional Scale",
-      initials: "SA",
       chip: "chip-mint",
     },
   ];
@@ -370,6 +366,11 @@ export default function AboutPage() {
                 borderLeft: "4px solid var(--color-primary)",
               }}
             >
+              <IconChip
+                icon={getIconForTitle("Our Mission")}
+                chipColor="teal"
+                style={{ marginBottom: "10px" }}
+              />
               <span
                 style={{
                   display: "inline-block",
@@ -415,6 +416,11 @@ export default function AboutPage() {
                 borderLeft: "4px solid var(--color-accent-gold)",
               }}
             >
+              <IconChip
+                icon={getIconForTitle("Our Vision")}
+                chipColor="gold"
+                style={{ marginBottom: "10px" }}
+              />
               <span
                 style={{
                   display: "inline-block",
@@ -506,18 +512,22 @@ export default function AboutPage() {
             {
               title: "ISO 9001 Ready",
               desc: "Structured quality management systems, standardized operational checklists, and continuous process optimization.",
+              chip: "chip-mint",
             },
             {
               title: "Data Protection",
               desc: "HIPAA-ready clinical data encryption, GDPR-aligned patient confidentiality, and secure cloud tokenization.",
+              chip: "chip-teal",
             },
             {
               title: "Global Delivery",
               desc: "World-class engineering standards capable of delivering high-traffic platforms for international and regional clients.",
+              chip: "chip-gold",
             },
             {
               title: "Pan-Nepal Network",
               desc: "Deep roots across Nepal with certified partner networks, local language fluency, and boots-on-the-ground support.",
+              chip: "chip-lilac",
             },
           ].map((item, index) => (
             <div
@@ -525,6 +535,11 @@ export default function AboutPage() {
               className="dc-card dc-card-navy"
               style={{ padding: "18px 16px" }}
             >
+              <IconChip
+                icon={getIconForTitle(item.title)}
+                chipClass={item.chip}
+                style={{ marginBottom: "10px" }}
+              />
               <span
                 style={{
                   display: "inline-block",
@@ -562,7 +577,7 @@ export default function AboutPage() {
             eyebrow="Our Kathmandu Squad"
             titlePrefix="Meet the"
             gradientWord="Multidisciplinary Team"
-            subtitle="Strategists, coders, storytellers, and business leads driving Nepal's creative tech renaissance."
+            subtitle="Strategists, coders, storytellers, and business leads driving Nepal's creative tech renaissance. Names below are fictional demo personas."
             align="center"
           />
 
@@ -602,7 +617,7 @@ export default function AboutPage() {
                         fontWeight: 800,
                       }}
                     >
-                      {member.initials}
+                      {getInitialsFromName(member.name)}
                     </div>
                     <div>
                       <h3

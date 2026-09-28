@@ -5,6 +5,8 @@ import Card from "@/components/Card";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
+import IconChip from "@/components/IconChip";
+import { getIconForTitle } from "@/lib/sectionIcons";
 
 export const metadata = {
   title: "Services | Digital Chautari Kathmandu",
@@ -158,6 +160,11 @@ export default function ServicesPage() {
               >
                 {/* Left: Title, Description, Highlights */}
                 <div>
+                  <IconChip
+                    icon={getIconForTitle(category.title)}
+                    chipColor={category.chipColor}
+                    style={{ marginBottom: "12px" }}
+                  />
                   <div style={{ marginBottom: "10px" }}>
                     <span
                       style={{
@@ -256,15 +263,29 @@ export default function ServicesPage() {
                       }}
                       className="subservice-card"
                     >
-                      <h4
+                      <div
                         style={{
-                          fontSize: "1rem",
-                          fontWeight: 700,
-                          color: "var(--color-ink)",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
                         }}
                       >
-                        {sub.title}
-                      </h4>
+                        <IconChip
+                          icon={getIconForTitle(sub.title)}
+                          chipColor={category.chipColor}
+                          size={36}
+                          style={{ marginBottom: 0, fontSize: "1rem" }}
+                        />
+                        <h4
+                          style={{
+                            fontSize: "1rem",
+                            fontWeight: 700,
+                            color: "var(--color-ink)",
+                          }}
+                        >
+                          {sub.title}
+                        </h4>
+                      </div>
                       <p
                         style={{
                           fontSize: "0.85rem",
@@ -712,26 +733,32 @@ export default function ServicesPage() {
             {
               title: "Dedicated Project Manager",
               desc: "A single, responsive Kathmandu contact point who orchestrates engineers, designers, and media producers seamlessly.",
+              chip: "chip-teal",
             },
             {
               title: "Agile Development Cycle",
               desc: "Rapid two-week sprint cycles with live demo staging, constant backlog prioritization, and no bureaucratic bloat.",
+              chip: "chip-mint",
             },
             {
               title: "Transparent Pricing",
               desc: "Clear upfront proposals, zero hidden agency fees, and predictable monthly retainers tailored to your scope.",
+              chip: "chip-gold",
             },
             {
               title: "Post-Launch Support",
               desc: "Proactive security patching, system health checks, continuous SEO reviews, and ongoing conversion optimization.",
+              chip: "chip-lilac",
             },
             {
               title: "Scalable Architecture",
               desc: "Code and campaigns structured to seamlessly handle 10x traffic spikes, user growth, and geographic expansion.",
+              chip: "chip-pink",
             },
             {
               title: "Cross-Platform Expertise",
               desc: "Holistic integration across web, mobile, social algorithms, analytics tracking, and specialized clinical software.",
+              chip: "chip-teal",
             },
           ].map((item, index) => (
             <div
@@ -739,6 +766,11 @@ export default function ServicesPage() {
               className="dc-card dc-card-navy"
               style={{ padding: "20px 18px" }}
             >
+              <IconChip
+                icon={getIconForTitle(item.title)}
+                chipClass={item.chip}
+                style={{ marginBottom: "10px" }}
+              />
               <span
                 style={{
                   display: "inline-block",

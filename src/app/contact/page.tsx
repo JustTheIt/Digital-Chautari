@@ -3,6 +3,8 @@ import HeroPattern from "@/components/HeroPattern";
 import SectionHeader from "@/components/SectionHeader";
 import ContactForm from "@/components/ContactForm";
 import KathmanduMap from "@/components/KathmanduMap";
+import IconChip from "@/components/IconChip";
+import { getIconForTitle } from "@/lib/sectionIcons";
 
 export const metadata = {
   title: "Contact Us | Digital Chautari Kathmandu",
@@ -92,6 +94,11 @@ export default function ContactPage() {
                 }}
               >
                 <div>
+                  <IconChip
+                    icon={getIconForTitle(info.title)}
+                    chipColor={info.chipColor}
+                    style={{ marginBottom: "10px" }}
+                  />
                   <span
                     style={{
                       display: "inline-block",
@@ -172,6 +179,12 @@ export default function ContactPage() {
                 }}
               >
                 <div>
+                  <IconChip
+                    icon={getIconForTitle(dept.title)}
+                    chipColor={dept.chipColor}
+                    size={40}
+                    style={{ marginBottom: "10px" }}
+                  />
                   <div
                     style={{
                       display: "flex",
@@ -239,6 +252,62 @@ export default function ContactPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="section-tight">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Quick Answers"
+            titlePrefix="Frequently asked"
+            gradientWord="questions"
+            subtitle="Common questions about working with Digital Chautari. For pricing tiers, see our Services page."
+            align="left"
+          />
+          <div className="grid-2">
+            {[
+              {
+                q: "How do I start a project?",
+                a: "Use the contact form below or email contact@digitalchautari.com with your goals, timeline, and budget range. We reply within 24 hours.",
+              },
+              {
+                q: "Do you offer monthly retainers?",
+                a: "Yes. Starter and Professional marketing retainers start at Rs 15,000 and Rs 45,000 per month. Enterprise scopes are quoted custom.",
+              },
+              {
+                q: "Where is Physio@Home available?",
+                a: "Doorstep physiotherapy is currently focused on Kathmandu Valley (Kathmandu, Lalitpur, and Bhaktapur) with tele-rehab support.",
+              },
+              {
+                q: "What is your typical proposal timeline?",
+                a: "After an initial call, detailed proposals usually arrive within 2–3 business days. Urgent escalations are handled same day when possible.",
+              },
+            ].map((item) => (
+              <div key={item.q} className="dc-card" style={{ padding: "20px 22px" }}>
+                <h3
+                  style={{
+                    fontSize: "1.05rem",
+                    marginBottom: "8px",
+                    color: "var(--color-ink)",
+                  }}
+                >
+                  {item.q}
+                </h3>
+                <p style={{ fontSize: "0.9375rem", lineHeight: 1.6, margin: 0 }}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p style={{ marginTop: "16px", fontSize: "0.875rem" }}>
+            <a
+              href="/services#pricing"
+              style={{ color: "var(--color-primary)", fontWeight: 600 }}
+            >
+              View full pricing on Services →
+            </a>
+          </p>
         </div>
       </section>
 

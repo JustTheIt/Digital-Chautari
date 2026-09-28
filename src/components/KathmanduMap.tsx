@@ -230,7 +230,7 @@ export default function KathmanduMap() {
           Learn more about our pricing models, retainer agreements, project onboarding steps, and Physio@Home coverage.
         </p>
         <Link
-          href="/services#pricing"
+          href="/contact#faq"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -239,7 +239,7 @@ export default function KathmanduMap() {
             fontWeight: 700,
           }}
         >
-          <span>Visit FAQ & Pricing Section</span>
+          <span>Visit FAQ page →</span>
         </Link>
       </div>
 

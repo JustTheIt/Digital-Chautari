@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import IconChip from "@/components/IconChip";
+import { getIconForTitle } from "@/lib/sectionIcons";
 
 interface ProductData {
   id: string;
@@ -133,6 +135,9 @@ export default function ProductSwitcher() {
                 transition: "all 0.2s ease",
               }}
             >
+              <span style={{ marginRight: "8px" }} aria-hidden="true">
+                {getIconForTitle(product.title)}
+              </span>
               <span>{product.tabLabel}</span>
             </button>
           );
@@ -156,6 +161,11 @@ export default function ProductSwitcher() {
       >
         {/* Left Column: Product Information */}
         <div>
+          <IconChip
+            icon={getIconForTitle(currentProduct.title)}
+            chipColor="teal"
+            style={{ marginBottom: "12px" }}
+          />
           <span
             style={{
               display: "inline-block",

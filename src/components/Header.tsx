@@ -46,18 +46,11 @@ export default function Header() {
         transition: "all 0.3s ease",
       }}
     >
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          height: "76px",
-        }}
-      >
+      <div className="container header-inner">
         {/* Brand Logo & Wordmark */}
         <Link
           href="/"
+          className="header-brand"
           style={{
             display: "flex",
             alignItems: "center",
@@ -126,7 +119,7 @@ export default function Header() {
             alignItems: "center",
             gap: "32px",
           }}
-          className="desktop-nav"
+          className="desktop-nav header-nav-center"
         >
           {navLinks.map((link) => {
             const isActive =
@@ -168,14 +161,7 @@ export default function Header() {
         </nav>
 
         {/* Right CTA Button */}
-        <div
-          className="desktop-cta"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-          }}
-        >
+        <div className="desktop-cta header-actions">
           <Link
             href="/contact"
             className="btn-primary"

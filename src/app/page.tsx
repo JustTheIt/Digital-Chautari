@@ -7,13 +7,16 @@ import Card from "@/components/Card";
 import DarkSection from "@/components/DarkSection";
 import SectionHeader from "@/components/SectionHeader";
 import ClosingCta from "@/components/ClosingCta";
+import { getInitialsFromName } from "@/lib/getInitialsFromName";
+import IconChip from "@/components/IconChip";
+import { getIconForTitle } from "@/lib/sectionIcons";
 
 export default function HomePage() {
   return (
     <>
       {/* 1. Hero Section */}
       <HeroPattern
-        eyebrowText="Welcome to Digital Chautari"
+        eyebrowText="👋 Welcome to Digital Chautari"
         headingPrefix="We build"
         gradientWord="digital bridges"
         headingSuffix="between ideas and impact"
@@ -41,15 +44,15 @@ export default function HomePage() {
           stats={[
             {
               number: "3",
-              label: "Ventures & Products",
+              label: "Products",
             },
             {
               number: "6+",
-              label: "Team Members in KTM",
+              label: "Team Members",
             },
             {
               number: "100%",
-              label: "Client Commitment",
+              label: "Commitment",
             },
           ]}
         />
@@ -228,16 +231,21 @@ export default function HomePage() {
       >
         <div className="grid-4">
           {[
-            { number: "250+", label: "Projects Delivered", detail: "Across Web, Media & Ads" },
-            { number: "40+", label: "Happy Clients", detail: "Startups & Established Brands" },
-            { number: "1M+", label: "Content Views", detail: "Generated Across Media Channels" },
-            { number: "98%", label: "Client Retention", detail: "Ongoing Long-term Retainers" },
+            { number: "250+", label: "Projects Delivered", detail: "Across Web, Media & Ads", chip: "chip-mint" },
+            { number: "40+", label: "Happy Clients", detail: "Startups & Established Brands", chip: "chip-teal" },
+            { number: "1M+", label: "Content Views", detail: "Generated Across Media Channels", chip: "chip-gold" },
+            { number: "98%", label: "Client Retention", detail: "Ongoing Long-term Retainers", chip: "chip-lilac" },
           ].map((item, index) => (
             <div
               key={index}
               className="dc-card dc-card-navy"
               style={{ textAlign: "center", padding: "20px 16px" }}
             >
+              <IconChip
+                icon={getIconForTitle(item.label)}
+                chipClass={item.chip}
+                style={{ margin: "0 auto 12px auto" }}
+              />
               <div
                 style={{
                   fontFamily: "var(--font-heading)",
@@ -496,7 +504,6 @@ export default function HomePage() {
                 name: "Prabin Shrestha",
                 title: "Managing Director",
                 company: "Himalayan Organic Goods",
-                initials: "PS",
                 chip: "chip-mint",
               },
               {
@@ -505,7 +512,6 @@ export default function HomePage() {
                 name: "Dr. Sunita Karki",
                 title: "Head of Physical Medicine",
                 company: "Kathmandu Valley Care",
-                initials: "SK",
                 chip: "chip-teal",
               },
               {
@@ -514,7 +520,6 @@ export default function HomePage() {
                 name: "Rohan Manandhar",
                 title: "Founder & CTO",
                 company: "Aura Logistics Nepal",
-                initials: "RM",
                 chip: "chip-gold",
               },
             ].map((t, index) => (
@@ -529,23 +534,35 @@ export default function HomePage() {
                 }}
               >
                 <div>
-                  {/* Verified Rating Pill */}
                   <div
                     style={{
-                      display: "inline-flex",
+                      display: "flex",
                       alignItems: "center",
-                      padding: "4px 10px",
-                      borderRadius: "9999px",
-                      backgroundColor: "rgba(224, 169, 48, 0.15)",
-                      color: "var(--color-accent-gold)",
-                      fontSize: "0.75rem",
-                      fontWeight: 800,
-                      letterSpacing: "0.04em",
-                      textTransform: "uppercase",
+                      gap: "8px",
                       marginBottom: "10px",
                     }}
+                    aria-label="5 out of 5 stars"
                   >
-                    5.0 Rating • Verified Client
+                    <span
+                      style={{
+                        color: "var(--color-accent-gold)",
+                        fontSize: "1rem",
+                        letterSpacing: "0.12em",
+                        lineHeight: 1,
+                      }}
+                      aria-hidden="true"
+                    >
+                      ★★★★★
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "0.75rem",
+                        fontWeight: 600,
+                        color: "var(--color-muted)",
+                      }}
+                    >
+                      Verified client
+                    </span>
                   </div>
 
                   <p
@@ -579,7 +596,7 @@ export default function HomePage() {
                       fontWeight: 700,
                     }}
                   >
-                    {t.initials}
+                    {getInitialsFromName(t.name)}
                   </div>
                   <div>
                     <div

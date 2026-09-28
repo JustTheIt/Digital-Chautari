@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import IconChip from "@/components/IconChip";
+import { getIconForTitle } from "@/lib/sectionIcons";
 
 export type ChipColor = "mint" | "teal" | "gold" | "lilac" | "pink";
 
 interface CardProps {
   chipColor?: ChipColor;
+  icon?: string;
   tag?: string;
   title: string;
   description: string;
@@ -18,6 +21,7 @@ interface CardProps {
 
 export default function Card({
   chipColor = "mint",
+  icon,
   tag,
   title,
   description,
@@ -28,6 +32,8 @@ export default function Card({
   className = "",
   style,
 }: CardProps) {
+  const displayIcon = icon ?? getIconForTitle(title);
+
   return (
     <div
       className={`dc-card ${isDark ? "dc-card-navy" : ""} ${className}`}
@@ -39,6 +45,12 @@ export default function Card({
       }}
     >
       <div>
+        <IconChip
+          icon={displayIcon}
+          chipColor={chipColor}
+          style={{ marginBottom: tag ? "12px" : "14px" }}
+        />
+
         {/* Optional Tag */}
         {tag && (
           <div
